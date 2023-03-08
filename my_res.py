@@ -75,9 +75,24 @@ st.sidebar.image(img_url, caption='Your image caption', use_column_width=True, o
 
 #]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]
 
-st.sidebar.image("data-scientist.jpeg", width=100, height=100, 
-                 output_format='PNG', 
-                 style='border-radius:50%;')
+# Display a round image in the sidebar
+st.sidebar.markdown("""
+    <style>
+    .sidebar .sidebar-content {
+        border-radius: 0.5rem;
+        overflow: hidden;
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+    }
+    .sidebar .sidebar-content img {
+        border-radius: 50%;
+        width: 100%;
+        height: auto;
+    }
+    </style>
+    """, unsafe_allow_html=True)
+
+st.sidebar.image( "data-scientist.jpeg", output_format='PNG')
 
 
 #]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]
