@@ -74,7 +74,7 @@ st.markdown("""
 # Add image to sidebar
 st.sidebar.markdown("""
 <div class="sidebar-image-container">
-    <img src="https://drive.google.com/drive/u/0/folders/1n0RLOT4OOMGXV0WYjibmyGzrY-0_5dE-" alt="profile image" class="sidebar-image">
+    <img src="data-scientist.jpeg" alt="profile image" class="sidebar-image">
 </div>
 """, unsafe_allow_html=True)
 
