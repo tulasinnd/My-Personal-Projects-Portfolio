@@ -74,6 +74,8 @@ img_url = "data-scientist.jpeg"
 st.sidebar.image(img_url, caption='Your image caption', use_column_width=True, output_format='JPEG')
 
 #]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]
+import base64
+
 # Function to mask the image as a circle
 def circle_mask(image, size):
     """Returns a circular mask for the given image"""
@@ -84,15 +86,27 @@ def circle_mask(image, size):
     image.putalpha(mask)
     return image
 
+# Define the border and background color
+border_color = "#FFFFFF"
+background_color = "#F4F4F4"
+
 # Get the image file from the user
 image_file = st.file_uploader("Upload an image", type=["jpg", "jpeg", "png"])
 
-# Display the circular image if an image file was uploaded
+# Display the circular image with a border and a background color if an image file was uploaded
 if image_file is not None:
     image = Image.open(image_file)
     image = image.convert("RGBA")  # convert the image to RGBA format to add an alpha channel
     image = circle_mask(image, image.size)  # apply the circular mask to the image
-    st.image(image)
+
+    # Convert the image to base64 and display it in a circular form with a border and a background color
+    buffered = BytesIO()
+    image.save(buffered, format="PNG")
+    image_str = base64.b64encode(buffered.getvalue()).decode()
+    st.markdown(
+        f'<div style="border-radius: 50%; background-color: {background_color}; padding: 5px; border: 5px solid {border_color}; width: 200px; height: 200px; display: flex; justify-content: center; align-items: center;"><img src="data:image/png;base64,{image_str}" style="width: 90%; height: 90%; object-fit: contain;"></div>',
+        unsafe_allow_html=True
+    )
 
 #]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]
 
