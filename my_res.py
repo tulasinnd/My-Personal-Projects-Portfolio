@@ -1,11 +1,19 @@
 import streamlit as st
 # Set page config
-st.set_page_config(page_title="My Portfolio", page_icon=":guardsman:", layout="wide")
+st.set_page_config(layout="wide")
 
-# Set background color
-bgcolor = "skyblue"
-page_bg = f"style='background-color:{bgcolor};'"
-st.markdown(f'<body {page_bg}></body>', unsafe_allow_html=True)
+# Add some custom CSS to change the background color
+st.markdown(
+    """
+    <style>
+    body {
+        background-color: skyblue;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
 
 # Create a function to display the homepage
 def homepage():
