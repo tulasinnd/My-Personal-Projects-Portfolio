@@ -74,7 +74,7 @@ st.markdown("""
 # Add image to sidebar
 st.sidebar.markdown("""
 <div class="sidebar-image-container">
-    <img src="https://www.w3schools.com/w3images/avatar2.png" alt="profile image" class="sidebar-image">
+    <img src="data-scientist.jpe" alt="profile image" class="sidebar-image">
 </div>
 """, unsafe_allow_html=True)
 
