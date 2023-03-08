@@ -71,8 +71,7 @@ img_url = "data-scientist.jpeg"
 st.sidebar.image(img_url, caption='Your image caption', use_column_width=True, output_format='JPEG')
 
 #]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]
-image = "data-scientist.jpeg"
-st.sidebar.image(image, use_column_width=True, caption="Your Name")
+
 
 st.sidebar.markdown(
     """
@@ -89,6 +88,9 @@ st.sidebar.markdown(
     """,
     unsafe_allow_html=True,
 )
+
+image = "data-scientist.jpeg"
+st.sidebar.image(image, use_column_width=True, caption="Your Name")
 #]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]
 
 # Add a navigation menu to the sidebar
