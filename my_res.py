@@ -80,26 +80,33 @@ import streamlit as st
 image =  "data-scientist.jpeg"
 st.image(image, width=200, use_column_width=False, output_format='PNG')
 
-# Apply CSS styling
+# Apply CSS styling and image masking
 st.markdown(
     """
     <style>
-    .img-container img {
-        border-radius: 50%;
-        object-fit: cover;
+    .profile-pic {
         width: 200px;
         height: 200px;
+        background-position: center;
+        background-size: cover;
+        border-radius: 50%;
+        overflow: hidden;
+        box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.2);
+    }
+    .profile-pic img {
+        display: none;
     }
     </style>
     """,
     unsafe_allow_html=True
 )
 
-# Wrap image in a div with the 'img-container' class
+# Wrap image in a div to apply CSS styling and image masking
 st.markdown(
-    f'<div class="img-container"><img src="{image}"></div>',
+    f'<div class="profile-pic" style="background-image: url({image})"><img src="{image}"></div>',
     unsafe_allow_html=True
 )
+
 
 #jjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj
 # Add a navigation menu to the sidebar
