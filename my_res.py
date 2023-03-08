@@ -75,29 +75,9 @@ st.sidebar.image(img_url, caption='Your image caption', use_column_width=True, o
 
 #]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]
 
-# Define function to make image round
-def make_round(im, size, fill_color=(0, 0, 0, 0)):
-    # Create a square image
-    im_square = ImageOps.fit(im, (size, size), Image.ANTIALIAS)
-    
-    # Create a mask
-    mask = Image.new('L', (size, size), 0)
-    draw = ImageDraw.Draw(mask) 
-    draw.ellipse((0, 0, size, size), fill=255)
-    
-    # Apply the mask
-    im_round = ImageOps.fit(im, (size, size), Image.ANTIALIAS)
-    im_round.putalpha(mask)
-    
-    # Combine the square image and the round image
-    result = Image.new('RGBA', (size, size), fill_color)
-    result.paste(im_square, (0, 0), im_square)
-    result.paste(im_round, (0, 0), im_round)
-    
-    return result
-# Load and display image
-im = Image.open(img_url)
-st.sidebar.image(make_round(im, 128), use_column_width=True)
+st.sidebar.image("data-scientist.jpeg", width=100, height=100, 
+                 output_format='PNG', 
+                 style='border-radius:50%;')
 
 
 #]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]
