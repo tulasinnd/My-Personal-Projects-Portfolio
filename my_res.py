@@ -74,6 +74,34 @@ img_url = "data-scientist.jpeg"
 st.sidebar.image(img_url, caption='Your image caption', use_column_width=True, output_format='JPEG')
 
 #]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]
+import streamlit as st
+from PIL import Image, ImageDraw, ImageOps
+
+# Function to mask the image as a circle
+def circle_mask(image, size):
+    """Returns a circular mask for the given image"""
+    mask = Image.new('L', size, 0)
+    draw = ImageDraw.Draw(mask)
+    draw.ellipse((0, 0) + size, fill=255)
+    mask = ImageOps.invert(mask)
+    image.putalpha(mask)
+    return image
+
+# Get the image file from the user
+image_file = st.sidebar.file_uploader("Upload an image", type=["jpg", "jpeg", "png"])
+
+# Display the circular image in the sidebar if an image file was uploaded
+if image_file is not None:
+    image = Image.open(image_file)
+    image = image.convert("RGBA")  # convert the image to RGBA format to add an alpha channel
+    image = circle_mask(image, image.size)  # apply the circular mask to the image
+    
+    # Display the circular image using a div tag
+    st.sidebar.markdown(
+        f'<div style="width: 100%; height: 0; padding-bottom: 100%; position: relative;"><img src="data:image/png;base64,{image}" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; border-radius: 50%;" /></div>',
+        unsafe_allow_html=True
+    )
+
 
 #]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]
 
