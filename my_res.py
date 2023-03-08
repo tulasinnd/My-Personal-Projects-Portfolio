@@ -1,4 +1,7 @@
 import streamlit as st
+from PIL import Image
+import streamlit as st
+import numpy as np
 # Set page config
 st.set_page_config(layout="wide")
 
@@ -71,26 +74,27 @@ img_url = "data-scientist.jpeg"
 st.sidebar.image(img_url, caption='Your image caption', use_column_width=True, output_format='JPEG')
 
 #]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]
+# Open image
+img = Image.open("data-scientist.jpeg")
+
+# Create circular mask
+width, height = img.size
+size = (min(width, height),) * 2
+mask = Image.new('L', size, 0)
+draw = ImageDraw.Draw(mask)
+draw.ellipse((0, 0) + size, fill=255)
+
+# Apply mask to image
+img = np.array(img)
+mask = np.array(mask)
+result = np.empty(img.shape, dtype=img.dtype)
+for i in range(3):
+    result[:, :, i] = img[:, :, i] * (mask / 255)
+
+# Display circular image in sidebar
+st.sidebar.image(result, use_column_width=True, output_format="JPEG")
 
 
-st.sidebar.markdown(
-    """
-    <style>
-    .sidebar .sidebar-content .stImage {
-        max-width: 150px;
-        border-radius: 50%;
-        border: 2px solid #fff;
-        box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
-        margin-top: 20px;
-        margin-bottom: 20px;
-    }
-    </style>
-    """,
-    unsafe_allow_html=True,
-)
-
-image = "data-scientist.jpeg"
-st.sidebar.image(image, use_column_width=True, caption="Your Name")
 #]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]
 
 # Add a navigation menu to the sidebar
