@@ -73,6 +73,17 @@ pages = {
 
 # Add a navigation menu to the sidebar
 selection = st.sidebar.radio("Go to", list(pages.keys()))
+# Add image to the sidebar
+st.sidebar.image("/data/image.png", width=150)
+
+# Apply rounded shape to the image
+st.markdown("""
+    <style>
+        .sidebar .sidebar-content .stImage img {
+            border-radius: 50%;
+        }
+    </style>
+""", unsafe_allow_html=True)
 
 # Call the appropriate page based on the user's menu choice
 pages[selection]()
