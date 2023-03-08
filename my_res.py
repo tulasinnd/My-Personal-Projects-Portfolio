@@ -77,7 +77,7 @@ st.sidebar.image(img_url, caption='Your image caption', use_column_width=True, o
 import streamlit as st
 
 # Display image
-image =  "/assets/pic.jpg"
+image =  "assets/pic.jpg"
 st.image(image, width=200, use_column_width=False, output_format='PNG')
 
 # Apply CSS styling and image masking
