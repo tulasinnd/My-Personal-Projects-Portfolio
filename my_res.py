@@ -1,5 +1,5 @@
 import streamlit as st
-from PIL import Image, ImageDraw
+from PIL import Image, ImageDraw, ImageOps
 import streamlit as st
 import numpy as np
 # Set page config
@@ -74,25 +74,30 @@ img_url = "data-scientist.jpeg"
 st.sidebar.image(img_url, caption='Your image caption', use_column_width=True, output_format='JPEG')
 
 #]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]
-# Open image
-img = Image.open("data-scientist.jpeg")
 
-# Create circular mask
-width, height = img.size
-size = (min(width, height),) * 2
-mask = Image.new('L', size, 0)
-draw = ImageDraw.Draw(mask)
-draw.ellipse((0, 0) + size, fill=255)
-
-# Apply mask to image
-img = np.array(img)
-mask = np.array(mask)
-result = np.empty(img.shape, dtype=img.dtype)
-for i in range(3):
-    result[:, :, i] = img[:, :, i] * (mask / 255)
-
-# Display circular image in sidebar
-st.sidebar.image(result, use_column_width=True, output_format="JPEG")
+# Define function to make image round
+def make_round(im, size, fill_color=(0, 0, 0, 0)):
+    # Create a square image
+    im_square = ImageOps.fit(im, (size, size), Image.ANTIALIAS)
+    
+    # Create a mask
+    mask = Image.new('L', (size, size), 0)
+    draw = ImageDraw.Draw(mask) 
+    draw.ellipse((0, 0, size, size), fill=255)
+    
+    # Apply the mask
+    im_round = ImageOps.fit(im, (size, size), Image.ANTIALIAS)
+    im_round.putalpha(mask)
+    
+    # Combine the square image and the round image
+    result = Image.new('RGBA', (size, size), fill_color)
+    result.paste(im_square, (0, 0), im_square)
+    result.paste(im_round, (0, 0), im_round)
+    
+    return result
+# Load and display image
+im = Image.open("my_photo.jpg")
+st.sidebar.image(make_round(im, 128), use_column_width=True)
 
 
 #]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]
