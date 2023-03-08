@@ -78,7 +78,14 @@ st.sidebar.image(img_url, caption='Your image caption', use_column_width=True, o
 img = Image.open( "data-scientist.jpeg")
 st.sidebar.image(img, use_column_width=True, output_format='PNG', 
                  caption='Your Caption Here')
-
+st.markdown("""
+    <style>
+    .sidebar .stImage img {
+        border-radius: 50%;
+        overflow: hidden;
+    }
+    </style>
+    """, unsafe_allow_html=True)
 #]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]
 
 # Add a navigation menu to the sidebar
