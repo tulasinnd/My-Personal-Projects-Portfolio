@@ -1,10 +1,10 @@
 import streamlit as st
 
 # Set page title
-st.set_page_config(page_title="My Portfolio")
+st.set_page_config(page_title="MY PORTFOLIO")
 
 # Add title with pink color
 st.write(
-    f'<h1 style="color:#ff69b4;">My Portfolio</h1>',
+    f'<h1 style="color:#ff69b4;">MY PORTFOLIO</h1>',
     unsafe_allow_html=True
 )
