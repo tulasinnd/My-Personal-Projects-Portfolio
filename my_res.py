@@ -1,6 +1,17 @@
 import streamlit as st
 st.set_page_config(layout="wide")
 
+st.markdown(
+    """
+    <style>
+    body {
+        background-color: #87CEEB;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
 # Create a function to display the homepage
 def homepage():
     st.title("Welcome to my portfolio")
