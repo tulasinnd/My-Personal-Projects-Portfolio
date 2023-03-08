@@ -70,6 +70,33 @@ st.markdown("""
     </style>
 """, unsafe_allow_html=True)
 
+#]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]
+# Add image to sidebar
+st.sidebar.markdown("""
+<div class="sidebar-image-container">
+    <img src="https://www.w3schools.com/w3images/avatar2.png" alt="profile image" class="sidebar-image">
+</div>
+""", unsafe_allow_html=True)
+
+# Add styles to sidebar image
+st.markdown("""
+<style>
+    .sidebar-image-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+    }
+    .sidebar-image {
+        border-radius: 50%;
+        width: 80%;
+        height: auto;
+        margin-bottom: 10px;
+    }
+</style>
+""", unsafe_allow_html=True)
+#]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]
+
 # Add a navigation menu to the sidebar
 selection = st.sidebar.radio("Go to", list(pages.keys()))
 # Call the appropriate page based on the user's menu choice
