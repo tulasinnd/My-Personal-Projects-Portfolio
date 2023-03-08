@@ -74,10 +74,10 @@ img_url = "data-scientist.jpeg"
 st.sidebar.image(img_url, caption='Your image caption', use_column_width=True, output_format='JPEG')
 
 #]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]
-
 # Display a round image in the sidebar
-st.sidebar.image("data-scientist.jpeg", output_format='PNG', 
-                 style='border-radius: 50%; object-fit: cover;')
+img = Image.open( "data-scientist.jpeg")
+st.sidebar.image(img, use_column_width=True, output_format='PNG', 
+                 caption='Your Caption Here')
 
 #]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]
 
