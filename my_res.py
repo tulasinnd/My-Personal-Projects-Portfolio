@@ -96,7 +96,7 @@ def make_round(im, size, fill_color=(0, 0, 0, 0)):
     
     return result
 # Load and display image
-im = Image.open("my_photo.jpg")
+im = Image.open(img_url)
 st.sidebar.image(make_round(im, 128), use_column_width=True)
 
 
