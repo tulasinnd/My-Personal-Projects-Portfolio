@@ -71,8 +71,6 @@ pages = {
     "Others": Others,
 }
 
-# Add a navigation menu to the sidebar
-selection = st.sidebar.radio("Go to", list(pages.keys()))
 # Add image to the sidebar
 st.sidebar.image("data-scientist.jpeg", width=150)
 
@@ -85,6 +83,8 @@ st.markdown("""
     </style>
 """, unsafe_allow_html=True)
 
+# Add a navigation menu to the sidebar
+selection = st.sidebar.radio("Go to", list(pages.keys()))
 # Call the appropriate page based on the user's menu choice
 pages[selection]()
 
