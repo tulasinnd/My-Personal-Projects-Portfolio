@@ -59,16 +59,23 @@ pages = {
 }
 
 # Add image to the sidebar
-st.sidebar.image("data-scientist.jpeg", width=200)
-
-# Apply rounded shape to the image
-st.markdown("""
+st.markdown(
+    """
     <style>
-        .sidebar .sidebar-content .stImage img {
+        #image {
             border-radius: 50%;
+            height: 150px;
+            width: 150px;
+            object-fit: cover;
+            object-position: center;
         }
     </style>
-""", unsafe_allow_html=True)
+    """,
+    unsafe_allow_html=True
+)
+
+img_url = "data-scientist.jpeg"
+st.sidebar.image(img_url, caption='Your image caption', use_column_width=True, output_format='JPEG', id='image')
 
 #]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]
 image = "data-scientist.jpeg"
