@@ -75,7 +75,7 @@ st.markdown(
 )
 
 img_url = "data-scientist.jpeg"
-st.sidebar.image(img_url, caption='Your image caption', use_column_width=True, output_format='JPEG', id='image')
+st.sidebar.image(img_url, caption='Your image caption', use_column_width=True, output_format='JPEG')
 
 #]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]
 image = "data-scientist.jpeg"
