@@ -34,7 +34,7 @@
 import streamlit as st
 
 # Create a container for the navigation menu
-nav_container = st.beta_container()
+nav_container = st.container()
 
 # Add items to the navigation menu
 nav_container.write("Home")
