@@ -2,19 +2,6 @@ import streamlit as st
 # Set page config
 st.set_page_config(layout="wide")
 
-# Add some custom CSS to change the background color
-st.markdown(
-    """
-    <style>
-    body {
-        background-color: skyblue;
-    }
-    </style>
-    """,
-    unsafe_allow_html=True
-)
-
-
 # Create a function to display the homepage
 def Overview():
     st.write( f'<h1 style="color:#ff69b4;">MY PORTFOLIO</h1>', unsafe_allow_html=True )
@@ -72,7 +59,7 @@ pages = {
 }
 
 # Add image to the sidebar
-st.sidebar.image("data-scientist.jpeg", width=150)
+st.sidebar.image("data-scientist.jpeg", width=200)
 
 # Apply rounded shape to the image
 st.markdown("""
