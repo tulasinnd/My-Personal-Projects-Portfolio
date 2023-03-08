@@ -33,6 +33,9 @@ def Education():
 def Skills():
     st.title("Skills")
     
+def Experience():
+    st.title("Experience")
+    
 def Projects():
     st.title("Projects")
     
