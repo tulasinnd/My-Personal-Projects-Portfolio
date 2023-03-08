@@ -71,30 +71,24 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 #]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]
-# Add image to sidebar
-st.sidebar.markdown("""
-<div class="sidebar-image-container">
-    <img src="https://drive.google.com/file/d/1P_jpttzsL05wW0WieZqGVLccvTh9ah5i/view?usp=sharing" alt="profile image" class="sidebar-image">
-</div>
-""", unsafe_allow_html=True)
+image = "data-scientist.jpeg"
+st.sidebar.image(image, use_column_width=True, caption="Your Name")
 
-# Add styles to sidebar image
-st.markdown("""
-<style>
-    .sidebar-image-container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-top: 20px;
-    }
-    .sidebar-image {
+st.sidebar.markdown(
+    """
+    <style>
+    .sidebar .sidebar-content .stImage {
+        max-width: 150px;
         border-radius: 50%;
-        width: 80%;
-        height: auto;
-        margin-bottom: 10px;
+        border: 2px solid #fff;
+        box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+        margin-top: 20px;
+        margin-bottom: 20px;
     }
-</style>
-""", unsafe_allow_html=True)
+    </style>
+    """,
+    unsafe_allow_html=True,
+)
 #]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]
 
 # Add a navigation menu to the sidebar
