@@ -59,20 +59,13 @@ pages = {
 }
 
 # Add image to the sidebar
-st.markdown(
-    """
+st.markdown("""
     <style>
-        #image {
-            border-radius: 50%;
-            height: 150px;
-            width: 150px;
-            object-fit: cover;
-            object-position: center;
+        .sidebar .sidebar-content .stImage img {
+            border-radius: 50% !important;
         }
     </style>
-    """,
-    unsafe_allow_html=True
-)
+""", unsafe_allow_html=True)
 
 img_url = "data-scientist.jpeg"
 st.sidebar.image(img_url, caption='Your image caption', use_column_width=True, output_format='JPEG')
