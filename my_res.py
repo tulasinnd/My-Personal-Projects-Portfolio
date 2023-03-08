@@ -75,14 +75,18 @@ st.sidebar.image(img_url, caption='Your image caption', use_column_width=True, o
 
 #]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]
 # Display a round image in the sidebar
-img = Image.open( "data-scientist.jpeg")
-st.sidebar.image(img, use_column_width=True, output_format='PNG', 
-                 caption='Your Caption Here')
+img = Image.open("your_image.png")
+st.sidebar.image(img, width=150, use_column_width=False, 
+                 clamp=True, output_format='PNG')
+
+# Add custom CSS to make the image round
 st.markdown("""
     <style>
     .sidebar .stImage img {
         border-radius: 50%;
-        overflow: hidden;
+        object-fit: cover;
+        width: 100%;
+        height: auto;
     }
     </style>
     """, unsafe_allow_html=True)
