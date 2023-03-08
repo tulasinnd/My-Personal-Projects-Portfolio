@@ -74,7 +74,7 @@ pages = {
 # Add a navigation menu to the sidebar
 selection = st.sidebar.radio("Go to", list(pages.keys()))
 # Add image to the sidebar
-st.sidebar.image("/assets/data-scientist.jpeg", width=150)
+st.sidebar.image("data-scientist.jpeg", width=150)
 
 # Apply rounded shape to the image
 st.markdown("""
