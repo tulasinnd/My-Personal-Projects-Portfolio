@@ -73,6 +73,35 @@ st.markdown("""
 img_url = "data-scientist.jpeg"
 st.sidebar.image(img_url, caption='Your image caption', use_column_width=True, output_format='JPEG')
 
+#nnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn
+import streamlit as st
+
+# Display image
+image =  "data-scientist.jpeg"
+st.image(image, width=200, use_column_width=False, output_format='PNG')
+
+# Apply CSS styling
+st.markdown(
+    """
+    <style>
+    .img-container img {
+        border-radius: 50%;
+        object-fit: cover;
+        width: 200px;
+        height: 200px;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
+# Wrap image in a div with the 'img-container' class
+st.markdown(
+    f'<div class="img-container"><img src="{image}"></div>',
+    unsafe_allow_html=True
+)
+
+#jjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj
 # Add a navigation menu to the sidebar
 selection = st.sidebar.radio("Go to", list(pages.keys()))
 # Call the appropriate page based on the user's menu choice
