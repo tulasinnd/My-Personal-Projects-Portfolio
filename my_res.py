@@ -64,7 +64,6 @@ pages = {
 #********************************** ROUND IMAGE***************************************************************************************
 img_url ="assets/pic.jpg"
 st.sidebar.image(img_url, caption='Your image caption', use_column_width=True, output_format='JPEG')
-# image =  "assets/pic.jpg"
 # Apply CSS styling to create circular border
 st.markdown(
     """
