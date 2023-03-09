@@ -92,8 +92,8 @@ def Projects():
         font_size = "15px"
 
         # Set colors for paragraphs and unordered lists
-        highlight_color = "#ff6666"
-        paragraph_color = "#ccddff"
+        highlight_color = "#3E0A5"
+        paragraph_color = "#E2C2F6"
 
         # Set application link
         st.markdown(f"<p style='font-size: {font_size1}; color: {highlight_color}; font-weight: bold;'>Application Link:</p>", unsafe_allow_html=True)
