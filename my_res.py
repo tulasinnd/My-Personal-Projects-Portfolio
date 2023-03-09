@@ -20,8 +20,8 @@ def Contact():
             </style>
         """
 
-        st.write(pink_style, unsafe_allow_html=True)
-        st.write("""
+    st.write(pink_style, unsafe_allow_html=True)
+    st.write("""
             Here are some additional contact information you can consider including in your resume:
 
             6. Personal Website or Portfolio: If you have a personal website or portfolio showcasing your work, include the URL in your contact information.
