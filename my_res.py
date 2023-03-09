@@ -62,8 +62,12 @@ st.markdown(
 
 #*********************************************************************************************************************
 # Add a navigation menu to the sidebar
-selection = st.sidebar.selectbox("Go to", list(pages.keys()))
-# Call the appropriate page based on the user's menu choice
-pages[selection]()
+# selection = st.radio.selectbox("Go to", list(pages.keys()))
+# # Call the appropriate page based on the user's menu choice
+# pages[selection]()
+
+for page_name, page_func in pages.items():
+    if st.sidebar.button(page_name):
+        page_func()
 
 
