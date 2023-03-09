@@ -74,57 +74,25 @@ img_url ="assets/pic.jpg"
 st.sidebar.image(img_url, caption='Your image caption', use_column_width=True, output_format='JPEG')
 
 #nnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn
-# import streamlit as st
+
 
 # # Display image
 # image =  "assets/pic.jpg"
 # st.image(image, width=200, use_column_width=False, output_format='PNG')
 
-# # Apply CSS styling and image masking
+# # Apply CSS styling to create circular border
 # st.markdown(
 #     """
 #     <style>
-#     .profile-pic {
-#         width: 200px;
-#         height: 200px;
-#         background-position: center;
-#         background-size: cover;
+#     img {
 #         border-radius: 50%;
-#         overflow: hidden;
+#         border: 5px solid white;
 #         box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.2);
-#     }
-#     .profile-pic img {
-#         display: none;
 #     }
 #     </style>
 #     """,
 #     unsafe_allow_html=True
 # )
-
-# # Wrap image in a div to apply CSS styling and image masking
-# st.markdown(
-#     f'<div class="profile-pic" style="background-image: url({image})"><img src="{image}"></div>',
-#     unsafe_allow_html=True
-# )
-import streamlit as st
-
-# Display image
-image =  "assets/pic.jpg"
-st.image(image, width=200, use_column_width=False, output_format='PNG')
-
-# Apply CSS styling to create circular border
-st.markdown(
-    """
-    <style>
-    img {
-        border-radius: 50%;
-        border: 5px solid white;
-        box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.2);
-    }
-    </style>
-    """,
-    unsafe_allow_html=True
-)
 
 # Wrap image in a div to apply CSS styling
 st.markdown(
