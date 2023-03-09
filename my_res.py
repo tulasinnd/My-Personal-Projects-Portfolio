@@ -28,10 +28,10 @@ def Contact():
                         
             Full Name:              NAGULAPALLI NAGA DURGA TULASI
             
-            Email Address:          tulasinnd@gmail.com
-            
             Phone Number:           91332255545
-                      
+            
+            Email Address:          tulasinnd@gmail.com          
+                 
             LinkedIn Profile:       https://www.linkedin.com/in/tulasi-n-49b6111b0/
 
             GitHub Profile:         https://github.com/tulasinnd
