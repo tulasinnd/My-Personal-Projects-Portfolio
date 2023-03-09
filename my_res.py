@@ -61,25 +61,19 @@ pages = {
     "Others": Others,
 }
 
-# Add image to the sidebar
-st.markdown("""
-    <style>
-        .sidebar .sidebar-content .stImage img {
-            border-radius: 50% !important;
-        }
-    </style>
-""", unsafe_allow_html=True)
+# # Add image to the sidebar
+# st.markdown("""
+#     <style>
+#         .sidebar .sidebar-content .stImage img {
+#             border-radius: 50% !important;
+#         }
+#     </style>
+# """, unsafe_allow_html=True)
 
+#********************************** ROUND IMAGE***************************************************************************************
 img_url ="assets/pic.jpg"
 st.sidebar.image(img_url, caption='Your image caption', use_column_width=True, output_format='JPEG')
-
-#nnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn
-
-
-# Display image
 image =  "assets/pic.jpg"
-#st.image(image, width=200, use_column_width=False, output_format='PNG')
-
 # Apply CSS styling to create circular border
 st.markdown(
     """
@@ -94,14 +88,7 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-# Wrap image in a div to apply CSS styling
-# st.markdown(
-#     f'<div style="border-radius: 50%; overflow: hidden; box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.2); width: 200px; height: 200px;"><img src="{image}" style="object-fit: cover; width: 100%; height: 100%;"></div>',
-#     unsafe_allow_html=True
-# )
-
-
-#jjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj
+#*********************************************************************************************************************
 # Add a navigation menu to the sidebar
 selection = st.sidebar.radio("Go to", list(pages.keys()))
 # Call the appropriate page based on the user's menu choice
