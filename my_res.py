@@ -120,17 +120,17 @@ def Projects():
         st.markdown(f"<ul style='font-size: {font_size}; color: {paragraph_color};'><li>The accuracy of the predictions may vary depending on the quality of the input data</li><li>The model is based on historical population trends, which may not reflect future changes in population</li><li>The model may not account for external factors that could impact a country's population, such as natural disasters or political events</li></ul>", unsafe_allow_html=True)
 
       
-    with st.expander("1 POPULATION PREDICTION SYSTEM"):
+    with st.expander("2 DATA EXTRACTION FROM BUSINESS CARDS USING OCR"):
 
         # Set heading style
         st.markdown("<h2 style=color: #26547C;'>Population Prediction System</h1>", unsafe_allow_html=True)
         
-    with st.expander("1 POPULATION PREDICTION SYSTEM"):
+    with st.expander("3 PHONEPE PULSE DATA (2018-2022) VISUALIZATION & ANALYSIS"):
 
         # Set heading style
         st.markdown("<h2 style=color: #26547C;'>Population Prediction System</h1>", unsafe_allow_html=True)
         
-    with st.expander("1 POPULATION PREDICTION SYSTEM"):
+    with st.expander("4 TWITTER SCRAPING USING SNSCRAPE"):
 
         # Set heading style
         st.markdown("<h2 style=color: #26547C;'>Population Prediction System</h1>", unsafe_allow_html=True)
