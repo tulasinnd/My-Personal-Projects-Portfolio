@@ -47,23 +47,21 @@ def Education():
     voilet_style = """
             <style>
                 p {
-                    color: pink;
+                    color: #9370DB;
                     font-weight: bold;
                     font-size: 24px;
-   
                 }
             </style>
         """
     st.write(voilet_style, unsafe_allow_html=True)
     st.write("""
-                        
-            PERIOD        COURSE                            INSTITUTE                   PERCENTAGE
-            2020-2023     Master's degree in Data Science   IITM with GUVI                  80
-            2014-2018     B.Tech (Information Technology)   Aditya Engineering College      78
-            2012-2014     Intermediate                      Aditya Junior College           92
-            2011-2012     SSC                               Mary Immaculate High School     93
-            
-           """)
+    PERIOD        COURSE                            INSTITUTE                   PERCENTAGE
+    2020-2023     Master's degree in Data Science   IITM with GUVI                  80
+    2014-2018     B.Tech (Information Technology)   Aditya Engineering College      78
+    2012-2014     Intermediate                      Aditya Junior College           92
+    2011-2012     SSC                               Mary Immaculate High School     93
+""")
+    
         
 def Skills():
     st.title("Skills")
