@@ -44,27 +44,19 @@ def Contact():
     
 def Education():
     st.write(f"<h1 style='color:#ad33ff;font-weight:bold;'>EDUCATION DETAILS</h1>", unsafe_allow_html=True)
-    voilet_style = """
-            <style>
-                p {
-                    color: #9370DB;
-                    font-weight: bold;
-                    font-size: 24px;
-                }
-            </style>
-        """
-    st.write(voilet_style, unsafe_allow_html=True)
-    st.write("""
-    <pre style='font-family: Courier;'>
-        PERIOD&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;COURSE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;INSTITUTE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PERCENTAGE
-        2020-2023&nbsp;&nbsp;&nbsp;&nbsp;Master's degree in Data Science&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;IITM with GUVI&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;80
-        2014-2018&nbsp;&nbsp;&nbsp;&nbsp;B.Tech (Information Technology)&nbsp;&nbsp;Aditya Engineering College&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;78
-        2012-2014&nbsp;&nbsp;&nbsp;&nbsp;Intermediate&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Aditya Junior College&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;92
-        2011-2012&nbsp;&nbsp;&nbsp;&nbsp;SSC&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mary Immaculate High School&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;93
-    </pre>
-    """, unsafe_allow_html=True)
+    import tabulate
 
-    
+    data = [    ['2020-2023', "Master's degree in Data Science", 'IITM with GUVI', 80],
+        ['2014-2018', 'B.Tech (Information Technology)', 'Aditya Engineering College', 78],
+        ['2012-2014', 'Intermediate', 'Aditya Junior College', 92],
+        ['2011-2012', 'SSC', 'Mary Immaculate High School', 93],
+    ]
+
+    headers = ['PERIOD', 'COURSE', 'INSTITUTE', 'PERCENTAGE']
+
+    table = tabulate.tabulate(data, headers=headers, tablefmt='html')
+
+    st.markdown(table, unsafe_allow_html=True)    
         
 def Skills():
     st.title("Skills")
