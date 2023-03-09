@@ -43,8 +43,11 @@ def Contact():
            """)
     
 def Education():
-    st.title("Education")
+    st.write(f"<h1 style='color:#9400D3;font-weight:bold;'>EDUCATION DETAILS</h1>", unsafe_allow_html=True)
+    st.write(f"<p style='color:violet;font-weight:bold;'>I am pursuing a Master's degree in Data Science from the Indian Institute of Technology Madras (IITM) with GUVI.</p>", unsafe_allow_html=True)
+    st.write(f"<p style='color:violet;font-weight:bold;'>I completed my Bachelor of Technology degree in Information Technology from XYZ University in 2018 with a strong academic record, achieving a GPA of 78%.</p>", unsafe_allow_html=True)
     
+        
 def Skills():
     st.title("Skills")
     
