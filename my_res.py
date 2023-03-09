@@ -80,7 +80,7 @@ def Skills():
     st.write("<div style='color:green'>- Knowledge of Streamlit for building interactive web applications, with experience developing applications that showcase data visualizations and machine learning models.</div>", unsafe_allow_html=True)
     st.write("<div style='color:green; font-size:24px'>Exploratory Data Analysis:</div>", unsafe_allow_html=True)
     st.write("<div style='color:green'>- Skilled in exploratory data analysis, with experience using tools such as pandas and NumPy to clean and preprocess data, and to identify patterns and relationships in data.</div>", unsafe_allow_html=True)
-    st.write("<div style='color:green; font-size:24px'>Feature Engineering:</div>", unsafe_allow_html=True
+    st.write("<div style='color:green; font-size:24px'>Feature Engineering:</div>", unsafe_allow_html=True)
 
      
     
