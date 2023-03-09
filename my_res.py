@@ -111,7 +111,7 @@ def Projects():
 
         # Set limitations
         st.markdown("<p style='font-size: 15px; color: {text_color_p};'>Limitations:</p>".format(highlight_color), unsafe_allow_html=True)
-        st.markdown("<ul style='font-size: 15px; color: {text_color_ul};'> <li>The accuracy of the predictions may vary depending on the quality of the input data</li><li>The model is based on historical population trends, which may not reflect future changes in population</li><li>The model may not account for external factors that could impact a country's population, such as natural disasters or political events</li></ul>".format(text_color_ul), unsafe_allow_html
+        st.markdown("<ul style='font-size: 15px; color: {text_color_ul};'> <li>The accuracy of the predictions may vary depending on the quality of the input data</li><li>The model is based on historical population trends, which may not reflect future changes in population</li><li>The model may not account for external factors that could impact a country's population, such as natural disasters or political events</li></ul>".format(text_color_ul), unsafe_allow_html=True)
  
     with st.expander("1 POPULATION PREDICTION SYSTEM"):
 
