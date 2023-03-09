@@ -87,16 +87,18 @@ def Projects():
     st.write( f'<h1 style="color:#228B22;">PROJECTS</h1>', unsafe_allow_html=True )    
     with st.expander("1 POPULATION PREDICTION SYSTEM"):
         # Set heading style
-        st.markdown("<h2 style=color: #FF8C00;'>Population Prediction System</h2>", unsafe_allow_html=True)
+        st.markdown("<h4 style=color: #FF8C00;'>Population Prediction System</h2>", unsafe_allow_html=True)
 
-        st.markdown("<p style='font-size: 15px; color: #595959;'>Application Link: <a href='https://tulasinnd-population-prediction-system-population-app-x6rrby.streamlit.app/'>https://tulasinnd-population-prediction-system-population-app-x6rrby.streamlit.app/</a></p>", unsafe_allow_html=True)
+        # Set application link
+        st.markdown("<p style='font-size: 15px; color: #595959;'>Application Link: <a href='https://tulasinnd-population-prediction-system-population-app-x6rrby.streamlit.app/' style='color: #595959;'>https://tulasinnd-population-prediction-system-population-app-x6rrby.streamlit.app/</a></p>", unsafe_allow_html=True)
 
         # Set source code link
-        st.markdown("<p style='font-size: 15px; color: #595959;'>Source Code Link: <a href='https://github.com/tulasinnd/Population-Prediction-System.git'>https://github.com/tulasinnd/Population-Prediction-System.git</a></p>", unsafe_allow_html=True)
+        st.markdown("<p style='font-size: 15px; color: #595959;'>Source Code Link: <a href='https://github.com/tulasinnd/Population-Prediction-System.git' style='color: #595959;'>https://github.com/tulasinnd/Population-Prediction-System.git</a></p>", unsafe_allow_html=True)
 
         # Set project overview
         st.markdown("<p style='font-size: 15px; color: #595959;'>Project Overview:</p>", unsafe_allow_html=True)
-        st.markdown("<ul style='font-size: 15px; color: #595959;'><li>This project uses polynomial regression to predict the population of a country for a given year.</li><li>The user can select a country and input a year for which they want to predict the population.</li><li>The system uses a dataset containing population information for various countries and years.</li></ul>", unsafe_allow_html=True)        
+        st.markdown("<ul style='font-size: 15px; color: #595959;'><li>This project uses polynomial regression to predict the population of a country for a given year.</li><li>The user can select a country and input a year for which they want to predict the population.</li><li>The system uses a dataset containing population information for various countries and years.</li></ul>", unsafe_allow_html=True)
+
         # Set skills required
         st.markdown("<p style='font-size: 15px; color: #FF8C00;'>Skills Required:</p>", unsafe_allow_html=True)
         st.markdown("<ul style='font-size: 15px; color: #333333;'><li>Knowledge of Python programming language</li><li>Familiarity with data cleaning, preprocessing, and analysis</li><li>Understanding of machine learning algorithms, particularly polynomial regression</li><li>Experience with data visualization libraries such as Plotly and Streamlit</li></ul>", unsafe_allow_html=True)
