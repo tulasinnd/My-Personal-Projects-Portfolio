@@ -4,20 +4,14 @@ import streamlit as st
 import numpy as np
 # Set page config
 # st.set_page_config(layout="wide")
-st.beta_set_page_config(
-    page_title="My Streamlit App",
-    page_icon=":smiley:",
-    layout="wide",
-    menu=[
-        "Home",
-        "About",
-        "Settings"
-    ]
-)
-
-menu = ["Home", "About", "Settings"]
-menu_placeholder = st.empty()
-selected_menu_item = menu_placeholder.radio("", menu)
+# Add some custom CSS to hide the Streamlit menu bar
+hide_streamlit_style = """
+            <style>
+            #MainMenu {visibility: hidden;}
+            footer {visibility: hidden;}
+            </style>
+            """
+st.markdown(hide_streamlit_style, unsafe_allow_html=True)
 
 # Create a function to display the homepage
 def Overview():
