@@ -85,12 +85,50 @@ def Experience():
     
 def Projects():
     st.write( f'<h1 style="color:#228B22;">PROJECTS</h1>', unsafe_allow_html=True )    
-    with st.expander("POPULATION PREDICTION SYSTEM"):
-        st.write('''
-            The chart above shows some numbers I picked for you.
-            I rolled actual dice for these, so they're *guaranteed* to
-            be random.
-       ''')
+    with st.expander("1 POPULATION PREDICTION SYSTEM"):
+        pink_style = """
+            <style>
+                p {
+                    color: pink;
+                    font-weight: bold;
+                    font-size: 24px;   
+                }
+            </style>
+        """
+        st.write(pink_style, unsafe_allow_html=True)
+        st.write("""
+        
+        Project Title: 
+        Population Prediction System
+        
+        Application Link:https://tulasinnd-population-prediction-system-population-app-x6rrby.streamlit.app/
+        
+        Source Code Link: https://github.com/tulasinnd/Population-Prediction-System.git
+
+        Project Overview: 
+        This project uses polynomial regression to predict the population of a country for a given year. 
+        The user can select a country and input a year for which they want to predict the population. 
+        The system uses a dataset containing population information for various countries and years.
+
+        Skills Required:
+        Knowledge of Python programming language
+        Familiarity with data cleaning, preprocessing, and analysis
+        Understanding of machine learning algorithms, particularly polynomial regression
+        Experience with data visualization libraries such as Plotly and Streamlit
+        
+        Advantages:
+        Provides accurate population predictions based on a country and year input
+        Offers a simple user interface through a Streamlit dashboard
+        Uses a machine learning algorithm to predict population, which can be more accurate than traditional statistical methods
+        
+        Limitations:
+        The accuracy of the predictions may vary depending on the quality of the input data
+        The model is based on historical population trends, which may not reflect future changes in population
+        The model may not account for external factors that could impact a country's population, such as natural disasters or political events
+
+               """)
+    
+
     
 def Certifications():
     st.title("Certifications")
