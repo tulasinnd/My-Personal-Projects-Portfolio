@@ -93,13 +93,15 @@ def Projects():
         highlight_color = "#FF8C00"
 
         # Set application link
-        st.markdown(f"<p style='font-size: 15px; color: {paragraph_color};'>Application Link: <a href='https://tulasinnd-population-prediction-system-population-app-x6rrby.streamlit.app/' style='color: {paragraph_color};'>https://tulasinnd-population-prediction-system-population-app-x6rrby.streamlit.app/</a></p>", unsafe_allow_html=True)
+        st.markdown(f"<p style='font-size: 15px; color: {highlight_color};'>Application Link:</p>", unsafe_allow_html=True)
+        st.markdown(f"<p style='font-size: 15px; color: {paragraph_color};'> <a href='https://tulasinnd-population-prediction-system-population-app-x6rrby.streamlit.app/' style='color: {paragraph_color};'>https://tulasinnd-population-prediction-system-population-app-x6rrby.streamlit.app/</a></p>", unsafe_allow_html=True)
 
         # Set source code link
-        st.markdown(f"<p style='font-size: 15px; color: {paragraph_color};'>Source Code Link: <a href='https://github.com/tulasinnd/Population-Prediction-System.git' style='color: {paragraph_color};'>https://github.com/tulasinnd/Population-Prediction-System.git</a></p>", unsafe_allow_html=True)
+        st.markdown(f"<p style='font-size: 15px; color: {highlight_color};'>Source Code Link:</p>", unsafe_allow_html=True)
+        st.markdown(f"<p style='font-size: 15px; color: {paragraph_color};'><a href='https://github.com/tulasinnd/Population-Prediction-System.git' style='color: {paragraph_color};'>https://github.com/tulasinnd/Population-Prediction-System.git</a></p>", unsafe_allow_html=True)
 
         # Set project overview
-        st.markdown(f"<p style='font-size: 15px; color: {paragraph_color};'>Project Overview:</p>", unsafe_allow_html=True)
+        st.markdown(f"<p style='font-size: 15px; color: {highlight_color};'>Project Overview:</p>", unsafe_allow_html=True)
         st.markdown(f"<ul style='font-size: 15px; color: {unordered_list_color};'><li>This project uses polynomial regression to predict the population of a country for a given year.</li><li>The user can select a country and input a year for which they want to predict the population.</li><li>The system uses a dataset containing population information for various countries and years.</li></ul>", unsafe_allow_html=True)
 
         # Set skills required
