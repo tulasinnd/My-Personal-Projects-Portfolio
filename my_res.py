@@ -3,15 +3,7 @@ from PIL import Image, ImageDraw, ImageOps
 import streamlit as st
 import numpy as np
 # Set page config
-# st.set_page_config(layout="wide")
-# Add some custom CSS to hide the Streamlit menu bar
-hide_streamlit_style = """
-            <style>
-            #MainMenu {visibility: hidden;}
-            footer {visibility: hidden;}
-            </style>
-            """
-st.markdown(hide_streamlit_style, unsafe_allow_html=True)
+st.set_page_config(layout="wide")
 
 # Create a function to display the homepage
 def Overview():
@@ -70,7 +62,7 @@ st.markdown(
 
 #*********************************************************************************************************************
 # Add a navigation menu to the sidebar
-selection = st.sidebar.radio("Go to", list(pages.keys()))
+selection = st.sidebar.button("Go to", list(pages.keys()))
 # Call the appropriate page based on the user's menu choice
 pages[selection]()
 
