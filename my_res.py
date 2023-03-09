@@ -60,11 +60,11 @@ def Education():
     
 def Skills():
     st.write( f'<h1 style="color:#33ff99;">TECHNICAL SKILLS</h1>', unsafe_allow_html=True )    
-    st.write("<div style='color:green; font-size:24px'>Python:</div>", unsafe_allow_html=True)
+    st.write("<div style='color:#99ff33; font-size:24px'>Python:</div>", unsafe_allow_html=True)
     st.write("<div style='color:green'>- Proficient in Python programming, with experience developing data pipelines, web applications, and machine learning models using libraries such as pandas, NumPy, and scikit-learn.</div>", unsafe_allow_html=True)
-    st.write("<div style='color:green; font-size:24px'>Descriptive Statistics:</div>", unsafe_allow_html=True)
+    st.write("<div style='color:#99ff33; font-size:24px'>Descriptive Statistics:</div>", unsafe_allow_html=True)
     st.write("<div style='color:green'>- Knowledge of descriptive statistics and probability theory, with experience in analyzing and summarizing data using statistical measures such as mean, median, mode, and standard deviation.</div>", unsafe_allow_html=True)
-    st.write("<div style='color:green; font-size:24px'>Data Visualization:</div>", unsafe_allow_html=True)
+    st.write("<div style='color:#99ff33; font-size:24px'>Data Visualization:</div>", unsafe_allow_html=True)
     st.write("<div style='color:green'>- Skilled in data visualization using libraries such as Matplotlib and Seaborn, with experience creating visualizations that effectively communicate insights and trends in data.</div>", unsafe_allow_html=True)
     st.write("<div style='color:green; font-size:24px'>Database Management:</div>", unsafe_allow_html=True)
     st.write("<div style='color:green'>- Experience working with both SQL and NoSQL databases, including MongoDB and MySQL, with knowledge of database design and optimization.</div>", unsafe_allow_html=True)
