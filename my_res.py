@@ -23,15 +23,15 @@ def Contact():
     st.write(pink_style, unsafe_allow_html=True)
     st.write("""
                         
-            Full Name: NAGULAPALLI NAGA DURGA TULASI
+            Full Name:              NAGULAPALLI NAGA DURGA TULASI
             
-            Email Address: tulasinnd@gmail.com
+            Email Address:          tulasinnd@gmail.com
             
-            Phone Number: 91332255545
+            Phone Number:           91332255545
                       
-            LinkedIn Profile: 
+            LinkedIn Profile:       https://www.linkedin.com/in/tulasi-n-49b6111b0/
 
-            GitHub Profile: 
+            GitHub Profile:         https://github.com/tulasinnd
             
            """)
     
