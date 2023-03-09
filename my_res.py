@@ -95,10 +95,10 @@ st.markdown(
 )
 
 # Wrap image in a div to apply CSS styling
-st.markdown(
-    f'<div style="border-radius: 50%; overflow: hidden; box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.2); width: 200px; height: 200px;"><img src="{image}" style="object-fit: cover; width: 100%; height: 100%;"></div>',
-    unsafe_allow_html=True
-)
+# st.markdown(
+#     f'<div style="border-radius: 50%; overflow: hidden; box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.2); width: 200px; height: 200px;"><img src="{image}" style="object-fit: cover; width: 100%; height: 100%;"></div>',
+#     unsafe_allow_html=True
+# )
 
 
 #jjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj
