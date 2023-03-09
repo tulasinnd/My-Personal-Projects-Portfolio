@@ -86,11 +86,11 @@ def Experience():
 def Projects():
     st.write( f'<h1 style="color:#228B22;">PROJECTS</h1>', unsafe_allow_html=True )    
     with st.expander("POPULATION PREDICTION SYSTEM"):
-    st.write(\"\"\"
-        The chart above shows some numbers I picked for you.
-        I rolled actual dice for these, so they're *guaranteed* to
-        be random.
-    \"\"\")
+        st.write(\"\"\"
+            The chart above shows some numbers I picked for you.
+            I rolled actual dice for these, so they're *guaranteed* to
+            be random.
+        \"\"\")
     
 def Certifications():
     st.title("Certifications")
