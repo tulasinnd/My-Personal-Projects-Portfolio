@@ -42,7 +42,7 @@ def Contact():
            """)
     
 def Education():
-    st.write(f"<h1 style='color:#ad33ff;font-weight:bold;'>EDUCATION DETAILS</h1>", unsafe_allow_html=True)
+    st.write(f"<h1 style='color:#cc33ff;font-weight:bold;'>EDUCATION DETAILS</h1>", unsafe_allow_html=True)
     data = {
         'PERIOD': ['2022-2023', '2014-2018', '2012-2014', '2011-2012'],
         'COURSE': ["Master's degree in Data Science", 'B.Tech (Information Technology)', 'Intermediate', 'SSC'],
@@ -53,7 +53,7 @@ def Education():
     df = pd.DataFrame(data)
     table = df.to_html(index=False, justify='center')
     # add some CSS rules to the HTML code
-    table = table.replace('<table', '<table style="font-size: 24px; color: #cc80ff;"')
+    table = table.replace('<table', '<table style="font-size: 24px; color: #ff33cc;"')
     st.markdown(table, unsafe_allow_html=True)
 
 
