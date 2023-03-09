@@ -88,9 +88,8 @@ def Projects():
 
     with st.expander("1 POPULATION PREDICTION SYSTEM"):
         # Set colors for paragraphs and unordered lists
-        paragraph_color = "#595959"
-        unordered_list_color = "#333333"
-        highlight_color = "#FF8C00"
+        highlight_color = "#ff6666"
+        paragraph_color = "#ccddff"
 
         # Set application link
         st.markdown(f"<p style='font-size: 15px; color: {highlight_color};'>Application Link:</p>", unsafe_allow_html=True)
@@ -102,19 +101,19 @@ def Projects():
 
         # Set project overview
         st.markdown(f"<p style='font-size: 15px; color: {highlight_color};'>Project Overview:</p>", unsafe_allow_html=True)
-        st.markdown(f"<ul style='font-size: 15px; color: {unordered_list_color};'><li>This project uses polynomial regression to predict the population of a country for a given year.</li><li>The user can select a country and input a year for which they want to predict the population.</li><li>The system uses a dataset containing population information for various countries and years.</li></ul>", unsafe_allow_html=True)
+        st.markdown(f"<ul style='font-size: 15px; color: {paragraph_color};'><li>This project uses polynomial regression to predict the population of a country for a given year.</li><li>The user can select a country and input a year for which they want to predict the population.</li><li>The system uses a dataset containing population information for various countries and years.</li></ul>", unsafe_allow_html=True)
 
         # Set skills required
         st.markdown(f"<p style='font-size: 15px; color: {highlight_color};'>Skills Required:</p>", unsafe_allow_html=True)
-        st.markdown(f"<ul style='font-size: 15px; color: {unordered_list_color};'><li>Knowledge of Python programming language</li><li>Familiarity with data cleaning, preprocessing, and analysis</li><li>Understanding of machine learning algorithms, particularly polynomial regression</li><li>Experience with data visualization libraries such as Plotly and Streamlit</li></ul>", unsafe_allow_html=True)
+        st.markdown(f"<ul style='font-size: 15px; color: {paragraph_color};'><li>Knowledge of Python programming language</li><li>Familiarity with data cleaning, preprocessing, and analysis</li><li>Understanding of machine learning algorithms, particularly polynomial regression</li><li>Experience with data visualization libraries such as Plotly and Streamlit</li></ul>", unsafe_allow_html=True)
 
         # Set advantages
         st.markdown(f"<p style='font-size: 15px; color: {highlight_color};'>Advantages:</p>", unsafe_allow_html=True)
-        st.markdown(f"<ul style='font-size: 15px; color: {unordered_list_color};'><li>Provides accurate population predictions based on a country and year input</li><li>Offers a simple user interface through a Streamlit dashboard</li><li>Uses a machine learning algorithm to predict population, which can be more accurate than traditional statistical methods</li></ul>", unsafe_allow_html=True)
+        st.markdown(f"<ul style='font-size: 15px; color: {paragraph_color};'><li>Provides accurate population predictions based on a country and year input</li><li>Offers a simple user interface through a Streamlit dashboard</li><li>Uses a machine learning algorithm to predict population, which can be more accurate than traditional statistical methods</li></ul>", unsafe_allow_html=True)
 
         # Set limitations
         st.markdown(f"<p style='font-size: 15px; color: {highlight_color};'>Limitations:</p>", unsafe_allow_html=True)
-        st.markdown(f"<ul style='font-size: 15px; color: {unordered_list_color};'><li>The accuracy of the predictions may vary depending on the quality of the input data</li><li>The model is based on historical population trends, which may not reflect future changes in population</li><li>The model may not account for external factors that could impact a country's population, such as natural disasters or political events</li></ul>", unsafe_allow_html=True)
+        st.markdown(f"<ul style='font-size: 15px; color: {paragraph_color};'><li>The accuracy of the predictions may vary depending on the quality of the input data</li><li>The model is based on historical population trends, which may not reflect future changes in population</li><li>The model may not account for external factors that could impact a country's population, such as natural disasters or political events</li></ul>", unsafe_allow_html=True)
 
 
       
