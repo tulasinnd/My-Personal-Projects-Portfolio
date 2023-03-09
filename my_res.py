@@ -16,7 +16,7 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
-st.set_page_config(layout="wide")
+# st.set_page_config(layout="wide")
 
 # Create a function to display the homepage
 def Overview():
