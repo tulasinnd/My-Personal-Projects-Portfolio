@@ -71,20 +71,15 @@ st.markdown(
 #         page_func()
         
 # Set the width of the buttons using CSS
-button_style = """
-    <style>
-    .st-eb button {
-        width: 200px;
-        }
-    </style>
-"""
-
-# Display the CSS style
-st.sidebar.markdown(button_style, unsafe_allow_html=True)
-
-# Create a button for each page in the sidebar with fixed width
-for page_name, page_func in pages.items():
-    if st.sidebar.button(page_name):
-        page_func()
+# Create a container for the buttons in the sidebar
+with st.sidebar.container():
+    
+    # Set the max-width of the container to ensure equal button width
+    st.markdown('<style>div.css-1aumxhk {max-width: 300px;}</style>', unsafe_allow_html=True)
+    
+    # Create a button for each page with equal width
+    for page in pages:
+        if st.button(page, key=page):
+            pages[page]()
 
 
