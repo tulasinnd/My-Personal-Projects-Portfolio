@@ -15,6 +15,10 @@ st.beta_set_page_config(
     ]
 )
 
+menu = ["Home", "About", "Settings"]
+menu_placeholder = st.empty()
+selected_menu_item = menu_placeholder.radio("", menu)
+
 # Create a function to display the homepage
 def Overview():
     st.write( f'<h1 style="color:#ff69b4;">MY PORTFOLIO</h1>', unsafe_allow_html=True )
