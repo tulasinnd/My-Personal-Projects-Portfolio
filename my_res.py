@@ -76,23 +76,23 @@ st.sidebar.image(img_url, caption='Your image caption', use_column_width=True, o
 #nnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn
 
 
-# # Display image
-# image =  "assets/pic.jpg"
-# st.image(image, width=200, use_column_width=False, output_format='PNG')
+# Display image
+image =  "assets/pic.jpg"
+#st.image(image, width=200, use_column_width=False, output_format='PNG')
 
-# # Apply CSS styling to create circular border
-# st.markdown(
-#     """
-#     <style>
-#     img {
-#         border-radius: 50%;
-#         border: 5px solid white;
-#         box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.2);
-#     }
-#     </style>
-#     """,
-#     unsafe_allow_html=True
-# )
+# Apply CSS styling to create circular border
+st.markdown(
+    """
+    <style>
+    img {
+        border-radius: 50%;
+        border: 5px solid white;
+        box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.2);
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
 
 # Wrap image in a div to apply CSS styling
 st.markdown(
