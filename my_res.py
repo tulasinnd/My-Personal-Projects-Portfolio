@@ -85,35 +85,37 @@ def Experience():
     
 def Projects():
     st.write( f'<h1 style="color:#228B22;">PROJECTS</h1>', unsafe_allow_html=True ) 
-            # Define color variables
-    text_color_p = "#595959"
-    text_color_ul = "#333333"
-    highlight_color = "#FF8C00"
-    with st.expander("1 POPULATION PREDICTION SYSTEM"):
 
+    with st.expander("1 POPULATION PREDICTION SYSTEM"):
+        # Set colors for paragraphs and unordered lists
+        paragraph_color = "#595959"
+        unordered_list_color = "#333333"
+        highlight_color = "#FF8C00"
 
         # Set application link
-        st.markdown("<p style='font-size: 15px; color: {text_color_p};'>Application Link: <a href='https://tulasinnd-population-prediction-system-population-app-x6rrby.streamlit.app/' style='color: {text_color_ul};'>https://tulasinnd-population-prediction-system-population-app-x6rrby.streamlit.app/</a></p>".format(text_color_p, text_color_p), unsafe_allow_html=True)
+        st.markdown(f"<p style='font-size: 15px; color: {paragraph_color};'>Application Link: <a href='https://tulasinnd-population-prediction-system-population-app-x6rrby.streamlit.app/' style='color: {paragraph_color};'>https://tulasinnd-population-prediction-system-population-app-x6rrby.streamlit.app/</a></p>", unsafe_allow_html=True)
 
         # Set source code link
-        st.markdown("<p style='font-size: 15px; color: {text_color_p};'>Source Code Link: <a href='https://github.com/tulasinnd/Population-Prediction-System.git' style='color: {text_color_ul};'>https://github.com/tulasinnd/Population-Prediction-System.git</a></p>".format(text_color_p, text_color_p), unsafe_allow_html=True)
+        st.markdown(f"<p style='font-size: 15px; color: {paragraph_color};'>Source Code Link: <a href='https://github.com/tulasinnd/Population-Prediction-System.git' style='color: {paragraph_color};'>https://github.com/tulasinnd/Population-Prediction-System.git</a></p>", unsafe_allow_html=True)
 
         # Set project overview
-        st.markdown("<p style='font-size: 15px; color: {text_color_p};'>Project Overview:</p>".format(text_color_p), unsafe_allow_html=True)
-        st.markdown("<ul style='font-size: 15px; color: {text_color_ul};'> <li>This project uses polynomial regression to predict the population of a country for a given year.</li><li>The user can select a country and input a year for which they want to predict the population.</li><li>The system uses a dataset containing population information for various countries and years.</li></ul>".format(text_color_ul), unsafe_allow_html=True)
+        st.markdown(f"<p style='font-size: 15px; color: {paragraph_color};'>Project Overview:</p>", unsafe_allow_html=True)
+        st.markdown(f"<ul style='font-size: 15px; color: {unordered_list_color};'><li>This project uses polynomial regression to predict the population of a country for a given year.</li><li>The user can select a country and input a year for which they want to predict the population.</li><li>The system uses a dataset containing population information for various countries and years.</li></ul>", unsafe_allow_html=True)
 
         # Set skills required
-        st.markdown("<p style='font-size: 15px; color: {text_color_p};'>Skills Required:</p>".format(highlight_color), unsafe_allow_html=True)
-        st.markdown("<ul style='font-size: 15px; color: {text_color_ul};'> <li>Knowledge of Python programming language</li><li>Familiarity with data cleaning, preprocessing, and analysis</li><li>Understanding of machine learning algorithms, particularly polynomial regression</li><li>Experience with data visualization libraries such as Plotly and Streamlit</li></ul>".format(text_color_ul), unsafe_allow_html=True)
+        st.markdown(f"<p style='font-size: 15px; color: {highlight_color};'>Skills Required:</p>", unsafe_allow_html=True)
+        st.markdown(f"<ul style='font-size: 15px; color: {unordered_list_color};'><li>Knowledge of Python programming language</li><li>Familiarity with data cleaning, preprocessing, and analysis</li><li>Understanding of machine learning algorithms, particularly polynomial regression</li><li>Experience with data visualization libraries such as Plotly and Streamlit</li></ul>", unsafe_allow_html=True)
 
         # Set advantages
-        st.markdown("<p style='font-size: 15px; color: {text_color_p};'>Advantages:</p>".format(highlight_color), unsafe_allow_html=True)
-        st.markdown("<ul style='font-size: 15px; color: {text_color_ul};'> <li>Provides accurate population predictions based on a country and year input</li><li>Offers a simple user interface through a Streamlit dashboard</li><li>Uses a machine learning algorithm to predict population, which can be more accurate than traditional statistical methods</li></ul>".format(text_color_ul), unsafe_allow_html=True)
+        st.markdown(f"<p style='font-size: 15px; color: {highlight_color};'>Advantages:</p>", unsafe_allow_html=True)
+        st.markdown(f"<ul style='font-size: 15px; color: {unordered_list_color};'><li>Provides accurate population predictions based on a country and year input</li><li>Offers a simple user interface through a Streamlit dashboard</li><li>Uses a machine learning algorithm to predict population, which can be more accurate than traditional statistical methods</li></ul>", unsafe_allow_html=True)
 
         # Set limitations
-        st.markdown("<p style='font-size: 15px; color: {text_color_p};'>Limitations:</p>".format(highlight_color), unsafe_allow_html=True)
-        st.markdown("<ul style='font-size: 15px; color: {text_color_ul};'> <li>The accuracy of the predictions may vary depending on the quality of the input data</li><li>The model is based on historical population trends, which may not reflect future changes in population</li><li>The model may not account for external factors that could impact a country's population, such as natural disasters or political events</li></ul>".format(text_color_ul), unsafe_allow_html=True)
- 
+        st.markdown(f"<p style='font-size: 15px; color: {highlight_color};'>Limitations:</p>", unsafe_allow_html=True)
+        st.markdown(f"<ul style='font-size: 15px; color: {unordered_list_color};'><li>The accuracy of the predictions may vary depending on the quality of the input data</li><li>The model is based on historical population trends, which may not reflect future changes in population</li><li>The model may not account for external factors that could impact a country's population, such as natural disasters or political events</li></ul>", unsafe_allow_html=True)
+
+
+      
     with st.expander("1 POPULATION PREDICTION SYSTEM"):
 
         # Set heading style
