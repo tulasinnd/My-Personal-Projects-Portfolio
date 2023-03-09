@@ -79,15 +79,18 @@ def Skills():
     st.write("<div style='color:#3CB371; font-size:24px'>Exploratory Data Analysis:</div>", unsafe_allow_html=True)
     st.write("<div style='color:#66d9ff'>- Skilled in exploratory data analysis, with experience using tools such as pandas and NumPy to clean and preprocess data, and to identify patterns and relationships in data.</div>", unsafe_allow_html=True)
     st.write("<div style='color:#3CB371; font-size:24px'>Feature Engineering:</div>", unsafe_allow_html=True)
-
-
-
-    
+  
 def Experience():
     st.title("Experience")
     
 def Projects():
-    st.title("Projects")
+    st.write( f'<h1 style="color:#228B22;">PROJECTS</h1>', unsafe_allow_html=True )    
+    with st.expander("POPULATION PREDICTION SYSTEM"):
+    st.write(\"\"\"
+        The chart above shows some numbers I picked for you.
+        I rolled actual dice for these, so they're *guaranteed* to
+        be random.
+    \"\"\")
     
 def Certifications():
     st.title("Certifications")
