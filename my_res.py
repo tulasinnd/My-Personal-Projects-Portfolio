@@ -88,13 +88,13 @@ def Projects():
     with st.expander("1 POPULATION PREDICTION SYSTEM"):
 
         # Set heading style
-        st.markdown("<h1 style='text-align: center; color: #26547C;'>Population Prediction System</h1>", unsafe_allow_html=True)
+        st.markdown("<h2 style=color: #26547C;'>Population Prediction System</h1>", unsafe_allow_html=True)
 
         # Set application link
-        st.markdown("<p style='font-size: 15px; text-align: center; color: #595959;'>Application Link: https://tulasinnd-population-prediction-system-population-app-x6rrby.streamlit.app/</p>", unsafe_allow_html=True)
+        st.markdown("<p style='font-size: 15px; color: #595959;'>Application Link: https://tulasinnd-population-prediction-system-population-app-x6rrby.streamlit.app/</p>", unsafe_allow_html=True)
 
         # Set source code link
-        st.markdown("<p style='font-size: 15px; text-align: center; color: #595959;'>Source Code Link: https://github.com/tulasinnd/Population-Prediction-System.git</p>", unsafe_allow_html=True)
+        st.markdown("<p style='font-size: 15px;color: #595959;'>Source Code Link: https://github.com/tulasinnd/Population-Prediction-System.git</p>", unsafe_allow_html=True)
 
         # Set project overview
         st.markdown("<p style='font-size: 15px; color: #595959;'>This project uses polynomial regression to predict the population of a country for a given year. The user can select a country and input a year for which they want to predict the population. The system uses a dataset containing population information for various countries and years.</p>", unsafe_allow_html=True)
