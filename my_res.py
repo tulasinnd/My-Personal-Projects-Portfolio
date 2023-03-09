@@ -84,12 +84,13 @@ def Experience():
     st.title("Experience")
     
 def Projects():
-    st.write( f'<h1 style="color:#228B22;">PROJECTS</h1>', unsafe_allow_html=True )    
+    st.write( f'<h1 style="color:#228B22;">PROJECTS</h1>', unsafe_allow_html=True ) 
+            # Define color variables
+    text_color_p = "#595959"
+    text_color_ul = "#333333"
+    highlight_color = "#FF8C00"
     with st.expander("1 POPULATION PREDICTION SYSTEM"):
-        # Define color variables
-        text_color_p = "#595959"
-        text_color_ul = "#333333"
-        highlight_color = "#FF8C00"
+
 
         # Set application link
         st.markdown("<p style='font-size: 15px; color: {text_color_p};'>Application Link: <a href='https://tulasinnd-population-prediction-system-population-app-x6rrby.streamlit.app/' style='color: {text_color_ul};'>https://tulasinnd-population-prediction-system-population-app-x6rrby.streamlit.app/</a></p>".format(text_color_p, text_color_p), unsafe_allow_html=True)
