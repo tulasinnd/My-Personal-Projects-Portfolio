@@ -16,6 +16,9 @@ def Contact():
             <style>
                 p {
                     color: pink;
+                    font-weight: bold;
+                    font-size: 24px;
+   
                 }
             </style>
         """
