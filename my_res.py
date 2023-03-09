@@ -3,7 +3,9 @@ from PIL import Image, ImageDraw, ImageOps
 import streamlit as st
 import numpy as np
 # Set page config
-st.set_page_config(layout="wide")
+# st.set_page_config(layout="wide")
+st.set_page_config(page_title="My Streamlit App", page_icon=":smiley:", layout="wide")
+
 
 # Create a function to display the homepage
 def Overview():
