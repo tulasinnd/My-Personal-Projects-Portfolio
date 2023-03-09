@@ -11,7 +11,7 @@ def Overview():
 
 # Create a function to display the contact page
 def Contact():
-    st.title("Contact Info")
+    st.write( f'<h1 style="color:#ff69b4;">CONTACT INFORMATION</h1>', unsafe_allow_html=True )
     
 def Education():
     st.title("Education")
