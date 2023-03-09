@@ -92,7 +92,7 @@ def Projects():
         font_size = "15px"
 
         # Set colors for paragraphs and unordered lists
-        highlight_color = "#3E0A5"
+        highlight_color = "##006666"
         paragraph_color = "#00b3b3"
 
         # Set application link
