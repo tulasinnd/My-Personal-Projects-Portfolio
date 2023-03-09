@@ -66,8 +66,15 @@ st.markdown(
 # # Call the appropriate page based on the user's menu choice
 # pages[selection]()
 
+# for page_name, page_func in pages.items():
+#     if st.sidebar.button(page_name):
+#         page_func()
+        
+button_width = 200
+
+# Create a button for each page in the sidebar with fixed width
 for page_name, page_func in pages.items():
-    if st.sidebar.button(page_name):
+    if st.sidebar.button(page_name, width=button_width):
         page_func()
 
 
