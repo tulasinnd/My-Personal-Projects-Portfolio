@@ -2,6 +2,7 @@ import streamlit as st
 from PIL import Image, ImageDraw, ImageOps
 import streamlit as st
 import numpy as np
+import pandas as pd
 # Set page config
 st.set_page_config(layout="wide")
 
@@ -44,20 +45,19 @@ def Contact():
     
 def Education():
     st.write(f"<h1 style='color:#ad33ff;font-weight:bold;'>EDUCATION DETAILS</h1>", unsafe_allow_html=True)
-    import tabulate
+    data = {
+    'PERIOD': ['2020-2023', '2014-2018', '2012-2014', '2011-2012'],
+    'COURSE': ["Master's degree in Data Science", 'B.Tech (Information Technology)', 'Intermediate', 'SSC'],
+    'INSTITUTE': ['IITM with GUVI', 'Aditya Engineering College', 'Aditya Junior College', 'Mary Immaculate High School'],
+    'PERCENTAGE': [80, 78, 92, 93],
+    }
 
-    data = [    ['2020-2023', "Master's degree in Data Science", 'IITM with GUVI', 80],
-        ['2014-2018', 'B.Tech (Information Technology)', 'Aditya Engineering College', 78],
-        ['2012-2014', 'Intermediate', 'Aditya Junior College', 92],
-        ['2011-2012', 'SSC', 'Mary Immaculate High School', 93],
-    ]
+    df = pd.DataFrame(data)
 
-    headers = ['PERIOD', 'COURSE', 'INSTITUTE', 'PERCENTAGE']
+    table = df.to_html(index=False, justify='center')
 
-    table = tabulate.tabulate(data, headers=headers, tablefmt='html')
-
-    st.markdown(table, unsafe_allow_html=True)    
-        
+    st.markdown(table, unsafe_allow_html=True)
+    
 def Skills():
     st.title("Skills")
     
