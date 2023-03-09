@@ -4,10 +4,7 @@ import streamlit as st
 import numpy as np
 # Set page config
 # # st.set_page_config(layout="wide")
-# st.set_page_config(page_title="My Streamlit App", page_icon=":smiley:", layout="wide",menu_hidden=True)
-st.beta_set_page_config(page_title="My Streamlit App", page_icon=":smiley:", layout="wide", menu_items=None)
-
-
+st.set_page_config(page_title="My Streamlit App", page_icon=":smiley:", layout="wide", menu="none")
 
 # Create a function to display the homepage
 def Overview():
