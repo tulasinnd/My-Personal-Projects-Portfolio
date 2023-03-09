@@ -135,7 +135,32 @@ def Projects():
         # Set heading style
         st.markdown("<h2 style=color: #26547C;'>Population Prediction System</h1>", unsafe_allow_html=True)
         
-    with st.expander("1 POPULATION PREDICTION SYSTEM"):
+    with st.expander("CLASSIFICATION PROJECT 1"):
+
+        # Set heading style
+        st.markdown("<h2 style=color: #26547C;'>Population Prediction System</h1>", unsafe_allow_html=True)
+        
+    with st.expander("CLASSIFICATION PROJECT 2"):
+
+        # Set heading style
+        st.markdown("<h2 style=color: #26547C;'>Population Prediction System</h1>", unsafe_allow_html=True)
+        
+    with st.expander("CLUSTERING PROJECT 1"):
+
+        # Set heading style
+        st.markdown("<h2 style=color: #26547C;'>Population Prediction System</h1>", unsafe_allow_html=True)
+        
+    with st.expander("DEEP LEARNING PROJECT 1"):
+
+        # Set heading style
+        st.markdown("<h2 style=color: #26547C;'>Population Prediction System</h1>", unsafe_allow_html=True)
+    
+    with st.expander("DEEP LEARNING PROJECT 2"):
+
+        # Set heading style
+        st.markdown("<h2 style=color: #26547C;'>Population Prediction System</h1>", unsafe_allow_html=True)
+        
+    with st.expander("DEEP LEARNING PROJECT 3"):
 
         # Set heading style
         st.markdown("<h2 style=color: #26547C;'>Population Prediction System</h1>", unsafe_allow_html=True)
