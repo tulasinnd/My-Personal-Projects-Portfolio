@@ -28,6 +28,8 @@ def Contact():
                         
             Full Name:              NAGULAPALLI NAGA DURGA TULASI
             
+            Location:               India, Andhra Pradesh, East Godavari District
+            
             Phone Number:           91332255545
             
             Email Address:          tulasinnd@gmail.com          
@@ -35,6 +37,8 @@ def Contact():
             LinkedIn Profile:       https://www.linkedin.com/in/tulasi-n-49b6111b0/
 
             GitHub Profile:         https://github.com/tulasinnd
+            
+            Personal Portfolio:     https://tulasinnd-my-personal-projects-portfolio-my-res-bk3xaw.streamlit.app/
             
            """)
     
