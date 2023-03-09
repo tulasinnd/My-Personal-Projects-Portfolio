@@ -59,30 +59,65 @@ def Education():
 
     
 def Skills():
-    st.write( f'<h1 style="color:#33ff99;">TECHNICAL SKILLS</h1>', unsafe_allow_html=True )
-    st.write("<div style='color:green; font-size:24px'>Professional Skills</div>", unsafe_allow_html=True)
-    st.write("<div style='color:green; font-size:24px'>--------------------</div>", unsafe_allow_html=True)
-    st.write("<div style='color:green; font-size:24px'>Python:</div>", unsafe_allow_html=True)
-    st.write("<div style='color:green'>- Proficient in Python programming, with experience developing data pipelines, web applications, and machine learning models using libraries such as pandas, NumPy, and scikit-learn.</div>", unsafe_allow_html=True)
-    st.write("<div style='color:green; font-size:24px'>Descriptive Statistics:</div>", unsafe_allow_html=True)
-    st.write("<div style='color:green'>- Knowledge of descriptive statistics and probability theory, with experience in analyzing and summarizing data using statistical measures such as mean, median, mode, and standard deviation.</div>", unsafe_allow_html=True)
-    st.write("<div style='color:green; font-size:24px'>Data Visualization:</div>", unsafe_allow_html=True)
-    st.write("<div style='color:green'>- Skilled in data visualization using libraries such as Matplotlib and Seaborn, with experience creating visualizations that effectively communicate insights and trends in data.</div>", unsafe_allow_html=True)
-    st.write("<div style='color:green; font-size:24px'>Database Management:</div>", unsafe_allow_html=True)
-    st.write("<div style='color:green'>- Experience working with both SQL and NoSQL databases, including MongoDB and MySQL, with knowledge of database design and optimization.</div>", unsafe_allow_html=True)
-    st.write("<div style='color:green; font-size:24px'>Deployment:</div>", unsafe_allow_html=True)
-    st.write("<div style='color:green'>- Experience deploying applications to the cloud using services such as AWS RDS and Streamlit Cloud, with knowledge of serverless architecture and continuous integration/continuous deployment (CI/CD) pipelines.</div>", unsafe_allow_html=True)
-    st.write("<div style='color:green; font-size:24px'>Machine Learning:</div>", unsafe_allow_html=True)
-    st.write("<div style='color:green'>- Strong understanding of machine learning concepts and algorithms, with experience building and evaluating models for classification, regression, and clustering tasks.</div>", unsafe_allow_html=True)
-    st.write("<div style='color:green; font-size:24px'>Deep Learning:</div>", unsafe_allow_html=True)
-    st.write("<div style='color:green'>- Familiarity with deep learning techniques such as convolutional neural networks and recurrent neural networks, with experience applying these techniques to tasks such as image classification and natural language processing.</div>", unsafe_allow_html=True)
-    st.write("<div style='color:green; font-size:24px'>Streamlit:</div>", unsafe_allow_html=True)
-    st.write("<div style='color:green'>- Knowledge of Streamlit for building interactive web applications, with experience developing applications that showcase data visualizations and machine learning models.</div>", unsafe_allow_html=True)
-    st.write("<div style='color:green; font-size:24px'>Exploratory Data Analysis:</div>", unsafe_allow_html=True)
-    st.write("<div style='color:green'>- Skilled in exploratory data analysis, with experience using tools such as pandas and NumPy to clean and preprocess data, and to identify patterns and relationships in data.</div>", unsafe_allow_html=True)
-    st.write("<div style='color:green; font-size:24px'>Feature Engineering:</div>", unsafe_allow_html=True)
+    st.write( f'<h1 style="color:#33ff99;">TECHNICAL SKILLS</h1>', unsafe_allow_html=True )    
+#     st.write("<div style='color:green; font-size:24px'>Python:</div>", unsafe_allow_html=True)
+#     st.write("<div style='color:green'>- Proficient in Python programming, with experience developing data pipelines, web applications, and machine learning models using libraries such as pandas, NumPy, and scikit-learn.</div>", unsafe_allow_html=True)
+#     st.write("<div style='color:green; font-size:24px'>Descriptive Statistics:</div>", unsafe_allow_html=True)
+#     st.write("<div style='color:green'>- Knowledge of descriptive statistics and probability theory, with experience in analyzing and summarizing data using statistical measures such as mean, median, mode, and standard deviation.</div>", unsafe_allow_html=True)
+#     st.write("<div style='color:green; font-size:24px'>Data Visualization:</div>", unsafe_allow_html=True)
+#     st.write("<div style='color:green'>- Skilled in data visualization using libraries such as Matplotlib and Seaborn, with experience creating visualizations that effectively communicate insights and trends in data.</div>", unsafe_allow_html=True)
+#     st.write("<div style='color:green; font-size:24px'>Database Management:</div>", unsafe_allow_html=True)
+#     st.write("<div style='color:green'>- Experience working with both SQL and NoSQL databases, including MongoDB and MySQL, with knowledge of database design and optimization.</div>", unsafe_allow_html=True)
+#     st.write("<div style='color:green; font-size:24px'>Deployment:</div>", unsafe_allow_html=True)
+#     st.write("<div style='color:green'>- Experience deploying applications to the cloud using services such as AWS RDS and Streamlit Cloud, with knowledge of serverless architecture and continuous integration/continuous deployment (CI/CD) pipelines.</div>", unsafe_allow_html=True)
+#     st.write("<div style='color:green; font-size:24px'>Machine Learning:</div>", unsafe_allow_html=True)
+#     st.write("<div style='color:green'>- Strong understanding of machine learning concepts and algorithms, with experience building and evaluating models for classification, regression, and clustering tasks.</div>", unsafe_allow_html=True)
+#     st.write("<div style='color:green; font-size:24px'>Deep Learning:</div>", unsafe_allow_html=True)
+#     st.write("<div style='color:green'>- Familiarity with deep learning techniques such as convolutional neural networks and recurrent neural networks, with experience applying these techniques to tasks such as image classification and natural language processing.</div>", unsafe_allow_html=True)
+#     st.write("<div style='color:green; font-size:24px'>Streamlit:</div>", unsafe_allow_html=True)
+#     st.write("<div style='color:green'>- Knowledge of Streamlit for building interactive web applications, with experience developing applications that showcase data visualizations and machine learning models.</div>", unsafe_allow_html=True)
+#     st.write("<div style='color:green; font-size:24px'>Exploratory Data Analysis:</div>", unsafe_allow_html=True)
+#     st.write("<div style='color:green'>- Skilled in exploratory data analysis, with experience using tools such as pandas and NumPy to clean and preprocess data, and to identify patterns and relationships in data.</div>", unsafe_allow_html=True)
+#     st.write("<div style='color:green; font-size:24px'>Feature Engineering:</div>", unsafe_allow_html=True)
 
-     
+    st.write("""
+    <style>
+    h1 {
+      color: #33ff66;
+      font-size: 36px;
+      font-weight: bold;
+    }
+    .green {
+      color: #33ff66;
+      font-size: 24px;
+      font-weight: bold;
+    }
+    </style>
+    """, unsafe_allow_html=True)
+
+    st.write("<h1>Professional Skills</h1>", unsafe_allow_html=True)
+    st.write("<div class='green'>Python:</div>", unsafe_allow_html=True)
+    st.write("<div class='green'>- Proficient in Python programming, with experience developing data pipelines, web applications, and machine learning models using libraries such as pandas, NumPy, and scikit-learn.</div>", unsafe_allow_html=True)
+    st.write("<div class='green'>Descriptive Statistics:</div>", unsafe_allow_html=True)
+    st.write("<div class='green'>- Knowledge of descriptive statistics and probability theory, with experience in analyzing and summarizing data using statistical measures such as mean, median, mode, and standard deviation.</div>", unsafe_allow_html=True)
+    st.write("<div class='green'>Data Visualization:</div>", unsafe_allow_html=True)
+    st.write("<div class='green'>- Skilled in data visualization using libraries such as Matplotlib and Seaborn, with experience creating visualizations that effectively communicate insights and trends in data.</div>", unsafe_allow_html=True)
+    st.write("<div class='green'>Database Management:</div>", unsafe_allow_html=True)
+    st.write("<div class='green'>- Experience working with both SQL and NoSQL databases, including MongoDB and MySQL, with knowledge of database design and optimization.</div>", unsafe_allow_html=True)
+    st.write("<div class='green'>Deployment:</div>", unsafe_allow_html=True)
+    st.write("<div class='green'>- Experience deploying applications to the cloud using services such as AWS RDS and Streamlit Cloud, with knowledge of serverless architecture and continuous integration/continuous deployment (CI/CD) pipelines.</div>", unsafe_allow_html=True)
+    st.write("<div class='green'>Machine Learning:</div>", unsafe_allow_html=True)
+    st.write("<div class='green'>- Strong understanding of machine learning concepts and algorithms, with experience building and evaluating models for classification, regression, and clustering tasks.</div>", unsafe_allow_html=True)
+    st.write("<div class='green'>Deep Learning:</div>", unsafe_allow_html=True)
+    st.write("<div class='green'>- Familiarity with deep learning techniques such as convolutional neural networks and recurrent neural networks, with experience applying these techniques to tasks such as image classification and natural language processing.</div>", unsafe_allow_html=True)
+    st.write("<div class='green'>Streamlit:</div>", unsafe_allow_html=True)
+    st.write("<div class='green'>- Knowledge of Streamlit for building interactive web applications, with experience developing applications that showcase data visualizations and machine learning models.</div>", unsafe_allow_html=True)
+    st.write("<div class='green'>Exploratory Data Analysis:</div>", unsafe_allow_html=True)
+    st.write("<div class='green'>- Skilled in exploratory data analysis, with experience using tools such as pandas and NumPy to clean and preprocess data, and to identify patterns and relationships in data.</div>", unsafe_allow_html=True)
+    st.write("<div class='green'>Feature Engineering:</div>", unsafe_allow_html=True)
+    st.write("<div class='green'>- Knowledge of feature engineering techniques, with experience selecting and transforming features to improve the performance of machine learning models.</div>", unsafe_allow_html=True)
+
+
     
 def Experience():
     st.title("Experience")
