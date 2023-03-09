@@ -44,9 +44,20 @@ def Contact():
     
 def Education():
     st.write(f"<h1 style='color:#9400D3;font-weight:bold;'>EDUCATION DETAILS</h1>", unsafe_allow_html=True)
-    st.write(f"<p style='color:violet;font-weight:bold;'>I am pursuing a Master's degree in Data Science from the Indian Institute of Technology Madras (IITM) with GUVI.</p>", unsafe_allow_html=True)
-    st.write(f"<p style='color:violet;font-weight:bold;'>I completed my Bachelor of Technology degree in Information Technology from XYZ University in 2018 with a strong academic record, achieving a GPA of 78%.</p>", unsafe_allow_html=True)
-    
+    colors = ["#9400D3", "#8A2BE2", "#A020F0", "#7B68EE", "#6A5ACD"]
+
+    # iterate over the list and display each color with its hex code
+    for color in colors:
+        st.write(f"<h1 style='color:{color};font-weight:bold;'>This is {color}</h1>", unsafe_allow_html=True)
+    st.write("""
+                        
+            PERIOD        COURSE                            INSTITUTE                   PERCENTAGE
+            2020-2023     Master's degree in Data Science   IITM with GUVI                  80
+            2014-2018     B.Tech (Information Technology)   Aditya Engineering College      78
+            2012-2014     Intermediate                      Aditya Junior College           92
+            2011-2012     SSC                               Mary Immaculate High School     93
+            
+           """)
         
 def Skills():
     st.title("Skills")
