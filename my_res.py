@@ -62,24 +62,9 @@ st.markdown(
 
 #*********************************************************************************************************************
 # Add a navigation menu to the sidebar
-# selection = st.radio.selectbox("Go to", list(pages.keys()))
-# # Call the appropriate page based on the user's menu choice
-# pages[selection]()
+selection = st.radio.selectbox("Go to", list(pages.keys()))
+# Call the appropriate page based on the user's menu choice
+pages[selection]()
 
-# for page_name, page_func in pages.items():
-#     if st.sidebar.button(page_name):
-#         page_func()
-        
-# Set the width of the buttons using CSS
-# Create a container for the buttons in the sidebar
-with st.sidebar.container():
-    
-    # Set the max-width of the container to ensure equal button width
-    st.markdown('<style>div.css-1aumxhk {max-width: 300px;}</style>', unsafe_allow_html=True)
-    
-    # Create a button for each page with equal width
-    for page in pages:
-        if st.button(page, key=page):
-            pages[page]()
 
 
