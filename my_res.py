@@ -43,12 +43,18 @@ def Contact():
            """)
     
 def Education():
-    st.write(f"<h1 style='color:#9400D3;font-weight:bold;'>EDUCATION DETAILS</h1>", unsafe_allow_html=True)
-    colors = ["#9400D3", "#8A2BE2", "#A020F0", "#7B68EE", "#6A5ACD"]
-
-    # iterate over the list and display each color with its hex code
-    for color in colors:
-        st.write(f"<h1 style='color:{color};font-weight:bold;'>This is {color}</h1>", unsafe_allow_html=True)
+    st.write(f"<h1 style='color:#ad33ff;font-weight:bold;'>EDUCATION DETAILS</h1>", unsafe_allow_html=True)
+    voilet_style = """
+            <style>
+                p {
+                    color: pink;
+                    font-weight: bold;
+                    font-size: 24px;
+   
+                }
+            </style>
+        """
+    st.write(voilet_style, unsafe_allow_html=True)
     st.write("""
                         
             PERIOD        COURSE                            INSTITUTE                   PERCENTAGE
