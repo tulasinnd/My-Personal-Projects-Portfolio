@@ -90,8 +90,7 @@ def Projects():
             <style>
                 p {
                     color: pink;
-                    font-weight: bold;
-                    font-size: 24px;   
+                    font-size: 14px;   
                 }
             </style>
         """
