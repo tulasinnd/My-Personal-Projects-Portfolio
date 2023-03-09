@@ -18,12 +18,10 @@ def Contact():
                 p {
                     color: pink;
                     font-weight: bold;
-                    font-size: 24px;
-   
+                    font-size: 24px;   
                 }
             </style>
         """
-
     st.write(pink_style, unsafe_allow_html=True)
     st.write("""
                         
@@ -45,16 +43,6 @@ def Contact():
     
 def Education():
     st.write(f"<h1 style='color:#ad33ff;font-weight:bold;'>EDUCATION DETAILS</h1>", unsafe_allow_html=True)
-#     data = {
-#     'PERIOD': ['2020-2023', '2014-2018', '2012-2014', '2011-2012'],
-#     'COURSE': ["Master's degree in Data Science", 'B.Tech (Information Technology)', 'Intermediate', 'SSC'],
-#     'INSTITUTE': ['IITM with GUVI', 'Aditya Engineering College', 'Aditya Junior College', 'Mary Immaculate High School'],
-#     'PERCENTAGE': [80, 78, 92, 93],
-#     }
-
-#     df = pd.DataFrame(data)
-
-#     table = df.to_html(index=False, justify='center')
     data = {
         'PERIOD': ['2020-2023', '2014-2018', '2012-2014', '2011-2012'],
         'COURSE': ["Master's degree in Data Science", 'B.Tech (Information Technology)', 'Intermediate', 'SSC'],
@@ -63,12 +51,9 @@ def Education():
     }
 
     df = pd.DataFrame(data)
-
     table = df.to_html(index=False, justify='center')
-
     # add some CSS rules to the HTML code
-    table = table.replace('<table', '<table style="font-size: 24px; color: #9b4dca;"')
-
+    table = table.replace('<table', '<table style="font-size: 24px; color: #cc80ff;"')
     st.markdown(table, unsafe_allow_html=True)
 
 
