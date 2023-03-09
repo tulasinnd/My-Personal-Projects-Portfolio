@@ -86,31 +86,51 @@ def Experience():
 def Projects():
     st.write( f'<h1 style="color:#228B22;">PROJECTS</h1>', unsafe_allow_html=True )    
     with st.expander("1 POPULATION PREDICTION SYSTEM"):
+        # Set heading style
+        st.markdown("<h2 style=color: #FF8C00;'>Population Prediction System</h2>", unsafe_allow_html=True)
+
+        # Set application link
+        st.markdown("<p style='font-size: 15px; color: #FF8C00;'>Application Link: https://tulasinnd-population-prediction-system-population-app-x6rrby.streamlit.app/</p>", unsafe_allow_html=True)
+
+        # Set source code link
+        st.markdown("<p style='font-size: 15px;color: #FF8C00;'>Source Code Link: https://github.com/tulasinnd/Population-Prediction-System.git</p>", unsafe_allow_html=True)
+
+        # Set project overview
+        st.markdown("<p style='font-size: 15px; color: #FF8C00;'>This project uses polynomial regression to predict the population of a country for a given year. The user can select a country and input a year for which they want to predict the population. The system uses a dataset containing population information for various countries and years.</p>", unsafe_allow_html=True)
+        
+        # Set skills required
+        st.markdown("<p style='font-size: 15px; color: #FF8C00;'>Skills Required:</p>", unsafe_allow_html=True)
+        st.markdown("<ul style='font-size: 15px; color: #333333;'><li>Knowledge of Python programming language</li><li>Familiarity with data cleaning, preprocessing, and analysis</li><li>Understanding of machine learning algorithms, particularly polynomial regression</li><li>Experience with data visualization libraries such as Plotly and Streamlit</li></ul>", unsafe_allow_html=True)
+
+        # Set advantages
+        st.markdown("<p style='font-size: 15px; color: #FF8C00;'>Advantages:</p>", unsafe_allow_html=True)
+        st.markdown("<ul style='font-size: 15px; color: #333333;'><li>Provides accurate population predictions based on a country and year input</li><li>Offers a simple user interface through a Streamlit dashboard</li><li>Uses a machine learning algorithm to predict population, which can be more accurate than traditional statistical methods</li></ul>", unsafe_allow_html=True)
+
+        # Set limitations
+        st.markdown("<p style='font-size: 15px; color: #FF8C00;'>Limitations:</p>", unsafe_allow_html=True)
+        st.markdown("<ul style='font-size: 15px; color: #333333;'><li>The accuracy of the predictions may vary depending on the quality of the input data</li><li>The model is based on historical population trends, which may not reflect future changes in population</li><li>The model may not account for external factors that could impact a country's population, such as natural disasters or political events</li></ul>", unsafe_allow_html=True)
+
+        
+        
+    with st.expander("1 POPULATION PREDICTION SYSTEM"):
 
         # Set heading style
         st.markdown("<h2 style=color: #26547C;'>Population Prediction System</h1>", unsafe_allow_html=True)
+        
+    with st.expander("1 POPULATION PREDICTION SYSTEM"):
 
-        # Set application link
-        st.markdown("<p style='font-size: 15px; color: #595959;'>Application Link: https://tulasinnd-population-prediction-system-population-app-x6rrby.streamlit.app/</p>", unsafe_allow_html=True)
+        # Set heading style
+        st.markdown("<h2 style=color: #26547C;'>Population Prediction System</h1>", unsafe_allow_html=True)
+        
+    with st.expander("1 POPULATION PREDICTION SYSTEM"):
 
-        # Set source code link
-        st.markdown("<p style='font-size: 15px;color: #595959;'>Source Code Link: https://github.com/tulasinnd/Population-Prediction-System.git</p>", unsafe_allow_html=True)
+        # Set heading style
+        st.markdown("<h2 style=color: #26547C;'>Population Prediction System</h1>", unsafe_allow_html=True)
+        
+    with st.expander("1 POPULATION PREDICTION SYSTEM"):
 
-        # Set project overview
-        st.markdown("<p style='font-size: 15px; color: #595959;'>This project uses polynomial regression to predict the population of a country for a given year. The user can select a country and input a year for which they want to predict the population. The system uses a dataset containing population information for various countries and years.</p>", unsafe_allow_html=True)
-
-        # Set skills required
-        st.markdown("<p style='font-size: 15px; color: #595959;'>Skills Required:</p>", unsafe_allow_html=True)
-        st.markdown("<ul style='font-size: 15px; color: #595959;'><li>Knowledge of Python programming language</li><li>Familiarity with data cleaning, preprocessing, and analysis</li><li>Understanding of machine learning algorithms, particularly polynomial regression</li><li>Experience with data visualization libraries such as Plotly and Streamlit</li></ul>", unsafe_allow_html=True)
-
-        # Set advantages
-        st.markdown("<p style='font-size: 15px; color: #595959;'>Advantages:</p>", unsafe_allow_html=True)
-        st.markdown("<ul style='font-size: 15px; color: #595959;'><li>Provides accurate population predictions based on a country and year input</li><li>Offers a simple user interface through a Streamlit dashboard</li><li>Uses a machine learning algorithm to predict population, which can be more accurate than traditional statistical methods</li></ul>", unsafe_allow_html=True)
-
-        # Set limitations
-        st.markdown("<p style='font-size: 15px; color: #595959;'>Limitations:</p>", unsafe_allow_html=True)
-        st.markdown("<ul style='font-size: 15px; color: #595959;'><li>The accuracy of the predictions may vary depending on the quality of the input data</li><li>The model is based on historical population trends, which may not reflect future changes in population</li><li>The model may not account for external factors that could impact a country's population, such as natural disasters or political events</li></ul>", unsafe_allow_html=True)
-
+        # Set heading style
+        st.markdown("<h2 style=color: #26547C;'>Population Prediction System</h1>", unsafe_allow_html=True)
     
 
     
