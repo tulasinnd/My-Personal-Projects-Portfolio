@@ -1,129 +1,168 @@
-from pathlib import Path
-
 import streamlit as st
-from PIL import Image
+from PIL import Image, ImageDraw, ImageOps
+import streamlit as st
+import numpy as np
+import pandas as pd
+# Set page config
+st.set_page_config(layout="wide")
+
+# Create a function to display the contact page
+def Contact():
+    st.write( f'<h1 style="color:#ff69b4;">CONTACT INFORMATION</h1>', unsafe_allow_html=True )
+    pink_style = """
+            <style>
+                p {
+                    color: pink;
+                    font-weight: bold;
+                    font-size: 24px;   
+                }
+            </style>
+        """
+    st.write(pink_style, unsafe_allow_html=True)
+    st.write("""
+                        
+            Full Name:              NAGULAPALLI NAGA DURGA TULASI
+            
+            Location:               India, Andhra Pradesh, East Godavari District
+            
+            Phone Number:           91332255545
+            
+            Email Address:          tulasinnd@gmail.com          
+                 
+            LinkedIn Profile:       https://www.linkedin.com/in/tulasi-n-49b6111b0/
+            GitHub Profile:         https://github.com/tulasinnd
+            
+            Personal Portfolio:     https://tulasinnd-my-personal-projects-portfolio-my-res-bk3xaw.streamlit.app/
+            
+           """)
+    
+def Education():
+    st.write(f"<h1 style='color:#cc33ff;font-weight:bold;'>EDUCATION DETAILS</h1>", unsafe_allow_html=True)
+    data = {
+        'PERIOD': ['2022-2023', '2014-2018', '2012-2014', '2011-2012'],
+        'COURSE': ["Master's degree in Data Science", 'B.Tech (Information Technology)', 'Intermediate', 'SSC'],
+        'INSTITUTE': ['IITM with GUVI', 'Aditya Engineering College', 'Aditya Junior College', 'Mary Immaculate High School'],
+        'PERCENTAGE': [80, 78, 92, 93],
+    }
+
+    df = pd.DataFrame(data)
+    table = df.to_html(index=False, justify='center')
+    # add some CSS rules to the HTML code
+    table = table.replace('<table', '<table style="font-size: 24px; color: #ff33cc;"')
+    st.markdown(table, unsafe_allow_html=True)
 
 
-# --- PATH SETTINGS ---
-current_dir = Path(__file__).parent if "__file__" in locals() else Path.cwd()
-# css_file = current_dir / "styles" / "main.css"
-resume_file = current_dir / "assets" / "CV.pdf"
-profile_pic = current_dir / "assets" / "pic.jpg"
+    
+def Skills():
+    st.write( f'<h1 style="color:#228B22;">TECHNICAL SKILLS</h1>', unsafe_allow_html=True )    
+    st.write("<div style='color:#3CB371; font-size:24px'>Python:</div>", unsafe_allow_html=True)
+    st.write("<div style='color:#66d9ff'>- I have developed varuius web applications, and machine learning models using libraries such as pandas, NumPy, and scikit-learn in python</div>", unsafe_allow_html=True)
+    st.write("<div style='color:#3CB371; font-size:24px'>Descriptive Statistics:</div>", unsafe_allow_html=True)
+    st.write("<div style='color:#66d9ff'>- Knowledge of descriptive statistics and probability theory, with experience in analyzing and summarizing data using statistical measures such as mean, median, mode, and standard deviation.</div>", unsafe_allow_html=True)
+    st.write("<div style='color:#3CB371; font-size:24px'>Data Visualization:</div>", unsafe_allow_html=True)
+    st.write("<div style='color:#66d9ff'>- Skilled in data visualization using libraries such as Matplotlib and Seaborn, with experience creating visualizations that effectively communicate insights and trends in data.</div>", unsafe_allow_html=True)
+    st.write("<div style='color:#3CB371; font-size:24px'>Database Management:</div>", unsafe_allow_html=True)
+    st.write("<div style='color:#66d9ff'>- Experience working with both SQL and NoSQL databases, including MongoDB and MySQL, with knowledge of database design and optimization.</div>", unsafe_allow_html=True)
+    st.write("<div style='color:#3CB371; font-size:24px'>Deployment:</div>", unsafe_allow_html=True)
+    st.write("<div style='color:#66d9ff'>- Experience deploying applications to the cloud using services such as AWS RDS and Streamlit Cloud, with knowledge of serverless architecture and continuous integration/continuous deployment (CI/CD) pipelines.</div>", unsafe_allow_html=True)
+    st.write("<div style='color:#3CB371; font-size:24px'>Machine Learning:</div>", unsafe_allow_html=True)
+    st.write("<div style='color:#66d9ff'>- Strong understanding of machine learning concepts and algorithms, with experience building and evaluating models for classification, regression, and clustering tasks.</div>", unsafe_allow_html=True)
+    st.write("<div style='color:#3CB371; font-size:24px'>Deep Learning:</div>", unsafe_allow_html=True)
+    st.write("<div style='color:#66d9ff'>- Familiarity with deep learning techniques such as convolutional neural networks and recurrent neural networks, with experience applying these techniques to tasks such as image classification and natural language processing.</div>", unsafe_allow_html=True)
+    st.write("<div style='color:#3CB371; font-size:24px'>Streamlit:</div>", unsafe_allow_html=True)
+    st.write("<div style='color:#66d9ff'>- Knowledge of Streamlit for building interactive web applications, with experience developing applications that showcase data visualizations and machine learning models.</div>", unsafe_allow_html=True)
+    st.write("<div style='color:#3CB371; font-size:24px'>Exploratory Data Analysis:</div>", unsafe_allow_html=True)
+    st.write("<div style='color:#66d9ff'>- Skilled in exploratory data analysis, with experience using tools such as pandas and NumPy to clean and preprocess data, and to identify patterns and relationships in data.</div>", unsafe_allow_html=True)
+    st.write("<div style='color:#3CB371; font-size:24px'>Feature Engineering:</div>", unsafe_allow_html=True)
+  
+  
+def Projects():
+    st.write( f'<h1 style="color:#228B22;">PROJECTS</h1>', unsafe_allow_html=True ) 
 
+    with st.expander("1 POPULATION PREDICTION SYSTEM"):
+        # Set font size
+        font_size1 = "19px"
+        font_size = "15px"
 
-# --- GENERAL SETTINGS ---
-PAGE_TITLE = "portfolio | Tulasi NND"
-PAGE_ICON = ":wave:"
-NAME = "Tulasi NND"
-DESCRIPTION = """
-I am a dedicated and aspiring individual with an objective of working in an organization that provides opportunities for technical and personal advancement
+        # Set colors for paragraphs and unordered lists
+        highlight_color = "#00e6e6"
+        paragraph_color = "#00b3b3"
 
-"""
-EMAIL = "tulasinnd@gmail.com"
-SOCIAL_MEDIA = {
-    "LinkedIn": "https://www.linkedin.com/in/tulasi-n-49b6111b0/",
-    "GitHub": "https://github.com/tulasinnd",
+        # Set application link
+        st.markdown(f"<p style='font-size: {font_size1}; color: {highlight_color}; font-weight: bold;'>Application Link:</p>", unsafe_allow_html=True)
+        st.markdown(f"<p style='font-size: {font_size}; color: {paragraph_color};'> <a href='https://tulasinnd-population-prediction-system-population-app-x6rrby.streamlit.app/' style='color: {paragraph_color};'>https://tulasinnd-population-prediction-system-population-app-x6rrby.streamlit.app/</a></p>", unsafe_allow_html=True)
+
+        # Set source code link
+        st.markdown(f"<p style='font-size: {font_size1}; color: {highlight_color}; font-weight: bold;'>Source Code Link:</p>", unsafe_allow_html=True)
+        st.markdown(f"<p style='font-size: {font_size}; color: {paragraph_color};'><a href='https://github.com/tulasinnd/Population-Prediction-System.git' style='color: {paragraph_color};'>https://github.com/tulasinnd/Population-Prediction-System.git</a></p>", unsafe_allow_html=True)
+
+        # Set project overview
+        st.markdown(f"<p style='font-size: {font_size1}; color: {highlight_color}; font-weight: bold;'>Project Overview:</p>", unsafe_allow_html=True)
+        st.markdown(f"<ul style='font-size: {font_size}; color: {paragraph_color};'><li>This project uses polynomial regression to predict the population of a country for a given year.</li><li>The user can select a country and input a year for which they want to predict the population.</li><li>The system uses a dataset containing population information for various countries and years.</li></ul>", unsafe_allow_html=True)
+
+        # Set skills required
+        st.markdown(f"<p style='font-size: {font_size1}; color: {highlight_color}; font-weight: bold;'>Skills Required:</p>", unsafe_allow_html=True)
+        st.markdown(f"<ul style='font-size: {font_size}; color: {paragraph_color};'><li>Knowledge of Python programming language</li><li>Familiarity with data cleaning, preprocessing, and analysis</li><li>Understanding of machine learning algorithms, particularly polynomial regression</li><li>Experience with data visualization libraries such as Plotly and Streamlit</li></ul>", unsafe_allow_html=True)
+
+        # Set advantages
+        st.markdown(f"<p style='font-size: {font_size1}; color: {highlight_color}; font-weight: bold;'>Advantages:</p>", unsafe_allow_html=True)
+        st.markdown(f"<ul style='font-size: {font_size}; color: {paragraph_color};'><li>Provides accurate population predictions based on a country and year input</li><li>Offers a simple user interface through a Streamlit dashboard</li><li>Uses a machine learning algorithm to predict population, which can be more accurate than traditional statistical methods</li></ul>", unsafe_allow_html=True)
+
+        # Set limitations
+        st.markdown(f"<p style='font-size: {font_size1}; color: {highlight_color}; font-weight: bold;'>Limitations:</p>", unsafe_allow_html=True)
+        st.markdown(f"<ul style='font-size: {font_size}; color: {paragraph_color};'><li>The accuracy of the predictions may vary depending on the quality of the input data</li><li>The model is based on historical population trends, which may not reflect future changes in population</li><li>The model may not account for external factors that could impact a country's population, such as natural disasters or political events</li></ul>", unsafe_allow_html=True)
+
+      
+    with st.expander("2 DATA EXTRACTION FROM BUSINESS CARDS USING OCR"):
+
+        # Set heading style
+        st.markdown("<h2 style=color: #26547C;'>Population Prediction System</h1>", unsafe_allow_html=True)
+        
+    with st.expander("3 PHONEPE PULSE DATA (2018-2022) VISUALIZATION & ANALYSIS"):
+
+        # Set heading style
+        st.markdown("<h2 style=color: #26547C;'>Population Prediction System</h1>", unsafe_allow_html=True)
+        
+    with st.expander("4 TWITTER SCRAPING USING SNSCRAPE"):
+
+        # Set heading style
+        st.markdown("<h2 style=color: #26547C;'>TWITTER SCRAPING USING SNSCRAPE</h1>", unsafe_allow_html=True)
+    
+    
+def Certifications():
+    st.title("Certifications")
+        
+      
+# Define the pages dictionary
+pages = {
+
+    "Contact Information": Contact,
+    "Education": Education,
+    "Skills": Skills,
+    "Projects": Projects,
+    "Certifications": Certifications,
 
 }
 
-
-
-st.set_page_config(page_title=PAGE_TITLE, page_icon=PAGE_ICON)
-
-
-# --- LOAD CSS, PDF & PROFIL PIC ---
-# with open(css_file) as f:
-    #st.markdown("<style>{}</style>".format(f.read()), unsafe_allow_html=True)
-with open(resume_file, "rb") as pdf_file:
-    PDFbyte = pdf_file.read()
-profile_pic = Image.open(profile_pic)
-
-
-# --- HERO SECTION ---
-col1, col2 = st.columns(2, gap="small")
-with col1:
-    st.image(profile_pic, width=230)
-
-with col2:
-    st.title(NAME)
-    st.write(DESCRIPTION)
-    st.download_button(
-        label=" 📄 Download Resume",
-        data=PDFbyte,
-        file_name=resume_file.name,
-        mime="application/octet-stream",
-    )
-    st.write("📫", "tulasinnd@gmail.com")
-    for index, (platform, link) in enumerate(SOCIAL_MEDIA.items()):
-        st.write(f"[{platform}]({link})")
-
-
-
-
-
-# --- EXPERIENCE & QUALIFICATIONS ---
-st.write('\n')
-st.subheader("Education")
-st.write(
+#********************************** ROUND IMAGE***************************************************************************************
+img_url ="assets/My_DS_Image.JPG"
+st.sidebar.image(img_url, caption='Your image caption', use_column_width=True, output_format='JPEG')
+# Apply CSS styling to create circular border
+st.markdown(
     """
-- ✔️ Present: Doing  Professional Master data science program at  IITM  with Guvi 
-- ✔️ 2014-2018: B.Tech (Information Technology)
-
-"""
+    <style>
+    img {
+        border-radius: 50%;
+        border: 5px solid white;
+        box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.2);
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
 )
 
-
-# --- SKILLS ---
-st.write('\n')
-st.subheader("Technical Stack")
-st.write(
-    """
-- 👩‍💻 Programming: Python (Scikit-learn, Pandas), SQL
-- 📊 Data Visulization: MS Excel, Plotly, Matplotlib, Seaborn 
-- 📚 Modeling: Supervised ML Algorithms, Unsupervised ML Algorithms
-- 🗄️ Databases: MongoDB, MySQL
-"""
-)
-
-
-# --- WORK HISTORY ---
-st.write('\n')
-st.subheader("Projects")
-st.write("---")
-
-# --- JOB 1
-
-st.write("🚧", "**Twitter Scraping**")
-st.write(
-    """
-- Technologies used: 
-Python, Streamlit, Snscrape\n
-- Introduction:
-Twitter Scraping web app basically searches tweets from twitter websites by taking any keyword or hashtag as input. It will populate all the tweets that are related to keyword/ hashtag dynamically.\n
-- Basic Working:
-Users have to give the following inputs to find tweets dynamically. keyword or Hashtag to be searched , starting date, ending date, Number of tweets needs to be scrapped. After scraping is done, User will be able to Download data as CSV/JSON or simply view Tweets\n
-- Link for app:'https://tulasinnd-twitter-scraping-with-snscrape-twitter-scraper-sm39k5.streamlit.app/'
-"""
-)
-
-# --- JOB 2
-st.write('\n')
-st.write("🚧", "**PhonePe Pulse Analysis**")
-st.write(
-    """
-- Technologies used: 
-Python, Streamlit, Plotly\n
-- Introduction:
-PhonePe pulse is a phonepe app data from 2018 to 2022 available in github repository(https://github.com/PhonePe/pulse ). I have created a dashboard to analyze and visualize Phonepe pulse data dynamically, this dashboard contains live maps, bar graphs, histograms, pie charts to analyze data in various aspects to extract facts\n
-- Basic Components of dashboard:
-Live Geo-Visualization,
-Transactions Data Analysis,
-User Data Analysis\n
-- Link for app:'https://tulasinnd-phonepe-pulse-data-2018-2-phonepe-dashboard-df-sochbu.streamlit.app/'
-
-"""
-)
-
-
-
-
+#*********************************************************************************************************************
+# Add a navigation menu to the sidebar
+selection = st.sidebar.radio("Go to", list(pages.keys()))
+# Call the appropriate page based on the user's menu choice
+pages[selection]()
